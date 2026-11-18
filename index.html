@@ -40,7 +40,7 @@
   .logo { font-family: var(--display); font-weight: 800; font-size: 20px; text-decoration: none; letter-spacing: -.3px; white-space: nowrap; }
   .logo span { color: var(--pink); }
   .nav ul { display: flex; gap: 4px; list-style: none; margin: 0 0 0 auto; padding: 0; }
-  .nav ul a { display: block; padding: 7px 12px; border-radius: 99px; text-decoration: none; font-size: 14px; font-weight: 600; color: var(--muted); transition: color .2s, background .2s; white-space: nowrap; }
+  .nav ul a { display: block; padding: 7px 10px; border-radius: 99px; text-decoration: none; font-size: 14px; font-weight: 600; color: var(--muted); transition: color .2s, background .2s; white-space: nowrap; }
   .nav ul a:hover, .nav ul a.on { color: var(--text); background: rgba(255,255,255,.07); }
   .nav .cta { padding: 9px 18px; border-radius: 99px; background: var(--text); color: var(--bg); font-weight: 700; font-size: 14px; text-decoration: none; white-space: nowrap; }
 
@@ -66,9 +66,46 @@
   .btn.o { border: 1px solid rgba(255,255,255,.22); color: var(--text); }
   .stack { position: relative; height: 560px; }
   .stack video { position: absolute; width: 230px; aspect-ratio: 9/16; object-fit: cover; border-radius: 22px; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 60px -20px rgba(0,0,0,.8); background: var(--card); }
-  .stack video:nth-child(1) { left: 0; top: 70px; transform: rotate(-7deg); z-index: 1; }
+  .stack video { animation: fl 7s ease-in-out infinite; }
+  .stack video:nth-child(1) { left: 0; top: 70px; rotate: -7deg; z-index: 1; animation-delay: -2s; }
   .stack video:nth-child(2) { left: 50%; margin-left: -115px; top: 0; z-index: 3; }
-  .stack video:nth-child(3) { right: 0; top: 90px; transform: rotate(7deg); z-index: 2; }
+  .stack video:nth-child(3) { right: 0; top: 90px; rotate: 7deg; z-index: 2; animation-delay: -4.5s; }
+  @keyframes fl { 50% { translate: 0 -12px; } }
+
+  /* v1.1 polish */
+  body:before { content: ''; position: fixed; inset: 0; z-index: 100; pointer-events: none; opacity: .045; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .prog { position: fixed; left: 0; top: 0; height: 3px; width: 100%; z-index: 70; background: var(--grad); transform-origin: 0 50%; transform: scaleX(0); }
+  .rot { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.5vw, 30px); letter-spacing: -.6px; margin: -8px 0 16px; color: #e9e4f5; }
+  .rw { display: inline-block; transition: opacity .35s, transform .35s; }
+  .rw.out { opacity: 0; transform: translateY(12px); }
+  .brandsband { background: var(--bg2); border-block: 1px solid var(--line); padding: 22px 0 20px; overflow: hidden; }
+  .brandsband .lbl { text-align: center; font-size: 12px; letter-spacing: 2.4px; text-transform: uppercase; font-weight: 700; color: #7d7593; margin-bottom: 14px; }
+  .brandsband .track span { font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: -.6px; color: #6f6888; transition: color .3s; }
+  .brandsband .track span:hover { color: var(--text); }
+  .brandsband .track { animation-duration: 45s; }
+  .brandsband:hover .track { animation-play-state: paused; }
+  .spot { position: relative; overflow: hidden; }
+  .spot:after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(255,95,162,.16), transparent 45%); opacity: 0; transition: opacity .3s; }
+  .light .spot:after { background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(155,107,255,.12), transparent 45%); }
+  .spot:hover:after { opacity: 1; }
+  .totop { position: fixed; right: 22px; bottom: 22px; z-index: 60; width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; background: var(--grad); color: #fff; text-decoration: none; font-size: 20px; font-weight: 800; box-shadow: 0 10px 30px -8px rgba(255,95,162,.6); opacity: 0; transform: translateY(16px); pointer-events: none; transition: opacity .3s, transform .3s; }
+  .totop.show { opacity: 1; transform: none; pointer-events: auto; }
+
+  /* experience */
+  .xp { display: grid; grid-template-columns: 1.45fr 1fr; gap: 30px; align-items: start; }
+  .jobs { padding: 34px 34px 10px; border-radius: 26px; background: #fff; box-shadow: 0 1px 0 var(--iline), 0 30px 60px -40px rgba(24,19,32,.4); }
+  .job { position: relative; padding: 0 0 28px 34px; border-left: 2px solid var(--iline); margin-left: 7px; }
+  .job:last-child { border-color: transparent; }
+  .job:before { content: ''; position: absolute; left: -9px; top: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--grad); box-shadow: 0 0 0 5px #fff; }
+  .job .when { font-size: 12.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: #c2357a; }
+  .job h3 { font-family: var(--display); font-weight: 800; font-size: 24px; letter-spacing: -.6px; margin: 4px 0 2px; line-height: 1.15; }
+  .job .org { color: var(--ink); font-weight: 700; font-size: 15px; margin-bottom: 6px; }
+  .job p { margin: 0; color: var(--ink2); font-size: 15px; }
+  .edu { display: grid; gap: 14px; }
+  .edu .card { padding: 22px 24px; }
+  .edu .card small { display: block; font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: #c2357a; margin-bottom: 6px; }
+  .edu .card b { display: block; font-size: 16.5px; line-height: 1.35; }
+  .edu .card span { display: block; color: var(--ink2); font-size: 14px; margin-top: 2px; }
   .tagfloat { position: absolute; z-index: 4; font-size: 12.5px; font-weight: 700; padding: 8px 13px; border-radius: 99px; background: rgba(24,20,36,.9); border: 1px solid var(--line); backdrop-filter: blur(6px); white-space: nowrap; }
   .tagfloat.a { left: 10px; bottom: 40px; } .tagfloat.b { right: 0; top: 30px; }
   .tagfloat b { color: var(--amber); }
@@ -238,6 +275,7 @@
   }
 
   @media (max-width: 1020px) {
+    .xp { grid-template-columns: 1fr; }
     .nav ul { display: none; }
     .nav .cta { margin-left: auto; }
     .hero .wrap { grid-template-columns: 1fr; }
@@ -259,6 +297,11 @@
     .sn { font-size: 72px; margin-bottom: 12px; }
   }
   @media (max-width: 640px) {
+    .jobs { padding: 24px 16px 4px; border-radius: 20px; }
+    .job { padding-left: 24px; }
+    .job h3 { font-size: 21px; }
+    .brandsband .track span { font-size: 21px; }
+    .totop { right: 14px; bottom: 14px; width: 44px; height: 44px; }
     .wrap { padding: 0 16px; }
     .hero { padding: 116px 0 56px; }
     .hero h1 { letter-spacing: -2px; }
@@ -284,6 +327,8 @@
 </style>
 </head>
 <body>
+<div class="prog" id="prog" aria-hidden="true"></div>
+<a class="totop" id="totop" href="#top" aria-label="Back to top">↑</a>
 
 <nav class="nav" id="nav">
   <div class="wrap">
@@ -296,6 +341,7 @@
       <li><a href="#ecommerce">E-commerce</a></li>
       <li><a href="#influencers">Influencers</a></li>
       <li><a href="#automation">Automation</a></li>
+      <li><a href="#experience">Experience</a></li>
     </ul>
     <a class="cta" href="#contact">Hire me</a>
   </div>
@@ -306,6 +352,7 @@
     <div>
       <div class="me"><span class="avatar"><img src="media/me.jpg" alt="Muntaha Manzoor"></span><span class="pill"><i></i>Available for remote work only · Pakistan (UTC+5)</span></div>
       <h1>Muntaha<br>Manzoor<span class="gt">.</span></h1>
+      <p class="rot">I help brands <span class="rw gt" id="rw">stop the scroll.</span></p>
       <p class="lead">I'm an <b>AI ad creative</b>, <b>e-commerce manager</b> and <b>marketing manager</b> with 7+ years of experience. I make product video ads with generative AI, grow brands on social media without paid ads, and run online stores for US and international clients.</p>
       <div class="btns">
         <a class="btn g" href="#ai-ads">See my work ↓</a>
@@ -322,19 +369,20 @@
   </div>
 </header>
 
-<div class="marquee" aria-hidden="true">
+<div class="brandsband">
+  <div class="lbl">Brands &amp; clients I've created for</div>
   <div class="track">
-    <span>Google Flow · Veo 3.1</span><span>Gemini · Nano Banana Pro</span><span>Higgsfield AI</span><span>Claude</span><span>Shopify</span><span>WooCommerce</span><span>Meta Business Suite</span><span>Buffer API</span><span>Google Apps Script</span><span>Printify</span><span>Canva</span><span>ffmpeg</span>
-    <span>Google Flow · Veo 3.1</span><span>Gemini · Nano Banana Pro</span><span>Higgsfield AI</span><span>Claude</span><span>Shopify</span><span>WooCommerce</span><span>Meta Business Suite</span><span>Buffer API</span><span>Google Apps Script</span><span>Printify</span><span>Canva</span><span>ffmpeg</span>
+    <span>Ohmistry</span><span>ThreadTheorys</span><span>Land Master</span><span>Maxotees.pk</span><span>Vivilen</span><span>RetroDigitalHub</span><span>Sehat Care Hub</span><span>Dadi's Lantern Books</span><span>SCG</span>
+    <span aria-hidden="true">Ohmistry</span><span aria-hidden="true">ThreadTheorys</span><span aria-hidden="true">Land Master</span><span aria-hidden="true">Maxotees.pk</span><span aria-hidden="true">Vivilen</span><span aria-hidden="true">RetroDigitalHub</span><span aria-hidden="true">Sehat Care Hub</span><span aria-hidden="true">Dadi's Lantern Books</span><span aria-hidden="true">SCG</span>
   </div>
 </div>
 
 <div class="wrap">
   <div class="stats">
-    <div class="stat rv"><b class="gt">7+ yrs</b><span>in marketing, e-commerce and client operations</span></div>
-    <div class="stat rv"><b class="gt">+277%</b><span>organic content views for ThreadTheorys in 90 days</span></div>
-    <div class="stat rv"><b class="gt">95%+</b><span>client satisfaction with US clients over 4+ years</span></div>
-    <div class="stat rv"><b class="gt">460+</b><span>POD post designs, plus 221 posts, reels &amp; voiceovers for one wellness brand</span></div>
+    <div class="stat rv"><b class="gt" data-to="7" data-suf="+ yrs">7+ yrs</b><span>in marketing, e-commerce and client operations</span></div>
+    <div class="stat rv"><b class="gt" data-to="277" data-pre="+" data-suf="%">+277%</b><span>organic content views for ThreadTheorys in 90 days</span></div>
+    <div class="stat rv"><b class="gt" data-to="95" data-suf="%+">95%+</b><span>client satisfaction with US clients over 4+ years</span></div>
+    <div class="stat rv"><b class="gt" data-to="460" data-suf="+">460+</b><span>POD post designs, plus 221 posts, reels &amp; voiceovers for one wellness brand</span></div>
   </div>
   <div class="roles">
     <a class="role rv" href="#ai-ads"><div class="k">Role 01</div><h3>AI Ad Creative</h3><p>Product commercials, UGC-style ads, before/after ads and story reels, made with Veo 3.1, Gemini and Higgsfield.</p><span class="go gt">See AI work →</span></a>
@@ -668,6 +716,35 @@
     </div>
   </section>
 
+  <!-- 08 EXPERIENCE -->
+  <section class="sec light" id="experience">
+    <div class="wrap">
+      <div class="sh rv">
+        <div class="sn">08</div>
+        <div>
+          <div class="kick">Career</div>
+          <h2>Experience <em class="s">&amp; education</em></h2>
+          <p>Seven years across client marketing, e-commerce operations and, now, AI-driven creative work, with remote US clients the whole way.</p>
+        </div>
+      </div>
+      <div class="xp">
+        <div class="jobs rv">
+          <div class="job"><div class="when">2026 – Present</div><h3>AI Ad Creative Specialist</h3><div class="org">AI Ads Studio · Freelance</div><p>A paid AI ad-creative service for online stores: product commercials, UGC-style ads and static ads in 9:16, 1:1 and 4:5, with ad copy.</p></div>
+          <div class="job"><div class="when">Jun 2025 – Present</div><h3>Marketing Manager</h3><div class="org">SCG · US-based firm</div><p>Brand identity and messaging, e-commerce workflows with CJ Dropshipping, AliExpress and AliDropship, influencer and UGC coordination, and market-analysis reports for executives.</p></div>
+          <div class="job"><div class="when">2019 – May 2026</div><h3>Marketing Specialist, Client Accounts &amp; Projects</h3><div class="org">Digiware Solutions</div><p>Primary contact for US clients for 4+ years with 95%+ satisfaction. Social content for apparel and POD brands, 1,300+ product mockups and weekly visuals for a B2B aviation-parts client.</p></div>
+          <div class="job"><div class="when">Independent</div><h3>Digital Marketing Strategist</h3><div class="org">Freelance</div><p>Social media for Ohmistry, ThreadTheorys and a Spanish-language wellness brand, plus automated outreach and scheduling workflows.</p></div>
+        </div>
+        <div class="edu">
+          <div class="card rv"><small>Education</small><b>Postgraduate Degree, Marketing Management</b><span>Virtual University of Pakistan · in progress</span></div>
+          <div class="card rv"><small>Education</small><b>BS Economics</b><span>International Islamic University Islamabad</span></div>
+          <div class="card rv"><small>Certification · 2026</small><b>Google Ads Search Certification</b><span>Google Skillshop</span></div>
+          <div class="card rv"><small>Certification · 2026</small><b>Meta Ads: Pixel, Catalog Sales &amp; Facebook Shop</b><span>Udemy</span></div>
+          <div class="card rv"><small>Languages</small><b>English · Urdu</b><span>Professional · Native</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="contact" id="contact">
@@ -690,6 +767,35 @@
 
 <script>
 (function () {
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // scroll progress + back-to-top
+  var prog = document.getElementById('prog'), top = document.getElementById('totop');
+  function pr() { var h = document.documentElement.scrollHeight - innerHeight; prog.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')'; top.classList.toggle('show', scrollY > 900); }
+  addEventListener('scroll', pr, { passive: true }); pr();
+
+  // rotating words
+  var rw = document.getElementById('rw'), words = ['stop the scroll.', 'sell more online.', 'grow without ad spend.', 'run on autopilot.'], wi = 0;
+  if (rw && !calm) setInterval(function () { rw.classList.add('out'); setTimeout(function () { wi = (wi + 1) % words.length; rw.textContent = words[wi]; rw.classList.remove('out'); }, 350); }, 2600);
+
+  // count-up numbers
+  var nums = document.querySelectorAll('[data-to]');
+  function fmt(n) { return n.toLocaleString('en-US'); }
+  if ('IntersectionObserver' in window && !calm) {
+    var co = new IntersectionObserver(function (es) { es.forEach(function (e) {
+      if (!e.isIntersecting) return; co.unobserve(e.target);
+      var el = e.target, to = +el.dataset.to, pre = el.dataset.pre || '', suf = el.dataset.suf || '', t0 = null;
+      function step(t) { if (!t0) t0 = t; var k = Math.min(1, (t - t0) / 1400), v = Math.round(to * (1 - Math.pow(1 - k, 3))); el.textContent = pre + fmt(v) + suf; if (k < 1) requestAnimationFrame(step); }
+      requestAnimationFrame(step);
+    }); }, { threshold: .6 });
+    nums.forEach(function (n) { co.observe(n); });
+  }
+
+  // spotlight on cards
+  document.querySelectorAll('.role, .stat, .card, .flow, .case, .jobs').forEach(function (el) {
+    el.classList.add('spot');
+    el.addEventListener('pointermove', function (e) { var r = el.getBoundingClientRect(); el.style.setProperty('--mx', (e.clientX - r.left) + 'px'); el.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
+  });
+
   // nav background + active link
   var nav = document.getElementById('nav');
   function onScroll() { nav.classList.toggle('solid', window.scrollY > 30); }
