@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muntaha Manzoor | Portfolio</title>
+<meta name="description" content="Portfolio of Muntaha Manzoor: AI ad creative, e-commerce manager and marketing manager. AI video ads, social media for e-commerce brands, store management, influencer outreach and marketing automation.">
+<meta property="og:title" content="Muntaha Manzoor | Portfolio">
+<meta property="og:description" content="AI Ad Creative · E-commerce Manager · Marketing Manager">
+<meta property="og:image" content="media/ai-velloa-hero.jpg">
+<meta name="theme-color" content="#0b0912">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.replace('no-js','js');</script>
+<style>
+  :root {
+    --bg: #0b0912; --bg2: #110e1b; --card: #181424; --card2: #1f1a2e;
+    --line: rgba(255,255,255,.09); --text: #f5f2fb; --muted: #a59eba;
+    --violet: #9b6bff; --pink: #ff5fa2; --amber: #ffb547;
+    --grad: linear-gradient(100deg, #9b6bff 0%, #ff5fa2 55%, #ffb547 100%);
+    --cream: #f6f1e9; --cream2: #efe8dc; --ink: #181320; --ink2: #5e566e; --iline: #e2d9cb;
+    --r: 18px;
+    --display: 'Bricolage Grotesque', system-ui, sans-serif;
+    --serif: 'Instrument Serif', Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: 'Manrope', system-ui, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img, video { display: block; max-width: 100%; }
+  a { color: inherit; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+  em.s { font-family: var(--serif); font-style: italic; font-weight: 400; letter-spacing: 0; }
+  .gt { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  /* nav */
+  .nav { position: fixed; inset: 0 0 auto; z-index: 50; transition: background .3s, border-color .3s; border-bottom: 1px solid transparent; }
+  .nav.solid { background: rgba(11,9,18,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-color: var(--line); }
+  .nav .wrap { display: flex; align-items: center; gap: 24px; height: 66px; }
+  .logo { font-family: var(--display); font-weight: 800; font-size: 20px; text-decoration: none; letter-spacing: -.3px; white-space: nowrap; }
+  .logo span { color: var(--pink); }
+  .nav ul { display: flex; gap: 4px; list-style: none; margin: 0 0 0 auto; padding: 0; }
+  .nav ul a { display: block; padding: 7px 12px; border-radius: 99px; text-decoration: none; font-size: 14px; font-weight: 600; color: var(--muted); transition: color .2s, background .2s; white-space: nowrap; }
+  .nav ul a:hover, .nav ul a.on { color: var(--text); background: rgba(255,255,255,.07); }
+  .nav .cta { padding: 9px 18px; border-radius: 99px; background: var(--text); color: var(--bg); font-weight: 700; font-size: 14px; text-decoration: none; white-space: nowrap; }
+
+  /* hero */
+  .hero { position: relative; padding: 150px 0 90px; overflow: hidden; }
+  .hero:before { content: ''; position: absolute; width: 900px; height: 900px; right: -260px; top: -380px; background: radial-gradient(closest-side, rgba(155,107,255,.38), transparent 70%); pointer-events: none; }
+  .hero:after { content: ''; position: absolute; width: 700px; height: 700px; left: -300px; bottom: -420px; background: radial-gradient(closest-side, rgba(255,95,162,.22), transparent 70%); pointer-events: none; }
+  .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr .85fr; gap: 40px; align-items: center; }
+  .pill { display: inline-flex; align-items: center; gap: 9px; padding: 7px 14px 7px 10px; border: 1px solid var(--line); border-radius: 99px; font-size: 13px; color: var(--muted); background: rgba(255,255,255,.03); }
+  .pill i { width: 8px; height: 8px; border-radius: 50%; background: #3ddc97; box-shadow: 0 0 0 4px rgba(61,220,151,.18); }
+  .hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(52px, 8.4vw, 112px); line-height: .92; letter-spacing: -3px; margin: 26px 0 22px; }
+  .hero h1 em.s { font-size: 1.04em; letter-spacing: -1px; }
+  .hero .lead { font-size: clamp(17px, 1.6vw, 19px); color: #cfc8e0; max-width: 560px; margin: 0 0 34px; }
+  .hero .lead b { color: var(--text); font-weight: 600; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 24px; border-radius: 99px; font-weight: 700; font-size: 15px; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn.g { background: var(--grad); color: #fff; box-shadow: 0 10px 30px -8px rgba(255,95,162,.55); }
+  .btn.o { border: 1px solid rgba(255,255,255,.22); color: var(--text); }
+  .stack { position: relative; height: 560px; }
+  .stack video { position: absolute; width: 230px; aspect-ratio: 9/16; object-fit: cover; border-radius: 22px; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 60px -20px rgba(0,0,0,.8); background: var(--card); }
+  .stack video:nth-child(1) { left: 0; top: 70px; transform: rotate(-7deg); z-index: 1; }
+  .stack video:nth-child(2) { left: 50%; margin-left: -115px; top: 0; z-index: 3; }
+  .stack video:nth-child(3) { right: 0; top: 90px; transform: rotate(7deg); z-index: 2; }
+  .tagfloat { position: absolute; z-index: 4; font-size: 12.5px; font-weight: 700; padding: 8px 13px; border-radius: 99px; background: rgba(24,20,36,.9); border: 1px solid var(--line); backdrop-filter: blur(6px); white-space: nowrap; }
+  .tagfloat.a { left: 10px; bottom: 40px; } .tagfloat.b { right: 0; top: 30px; }
+  .tagfloat b { color: var(--amber); }
+
+  /* marquee */
+  .marquee { border-block: 1px solid var(--line); overflow: hidden; padding: 18px 0; background: var(--bg2); }
+  .track { display: flex; gap: 44px; width: max-content; animation: mq 38s linear infinite; }
+  .track span { font-family: var(--display); font-weight: 600; font-size: 19px; color: #8e86a6; white-space: nowrap; display: flex; align-items: center; gap: 44px; }
+  .track span:after { content: '✦'; color: var(--pink); font-size: 13px; }
+  @keyframes mq { to { transform: translateX(-50%); } }
+
+  /* stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 70px 0 30px; }
+  .stat { padding: 26px 24px; border-radius: var(--r); background: var(--card); border: 1px solid var(--line); }
+  .stat b { display: block; font-family: var(--display); font-weight: 800; font-size: clamp(38px, 4.4vw, 54px); line-height: 1; letter-spacing: -1.5px; margin-bottom: 10px; }
+  .stat span { font-size: 14px; color: var(--muted); line-height: 1.45; display: block; }
+
+  /* roles */
+  .roles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 0 0 40px; }
+  .role { position: relative; display: block; padding: 28px 26px 26px; border-radius: var(--r); background: var(--card); border: 1px solid var(--line); text-decoration: none; transition: transform .25s, border-color .25s; overflow: hidden; }
+  .role:before { content: ''; position: absolute; inset: 0; background: var(--grad); opacity: 0; transition: opacity .3s; }
+  .role > * { position: relative; }
+  .role:hover { transform: translateY(-4px); border-color: transparent; }
+  .role:hover:before { opacity: .12; }
+  .role .k { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; font-weight: 700; color: var(--pink); }
+  .role h3 { font-family: var(--display); font-size: 26px; font-weight: 700; margin: 8px 0 8px; letter-spacing: -.5px; line-height: 1.1; }
+  .role p { margin: 0 0 18px; color: var(--muted); font-size: 15px; }
+  .role .go { font-weight: 700; font-size: 14px; }
+
+  /* sections */
+  section.sec { padding: 110px 0 40px; scroll-margin-top: 40px; position: relative; }
+  section.alt { background: var(--bg2); }
+  section.light { background: var(--cream); color: var(--ink); }
+  .sh { display: grid; grid-template-columns: 140px 1fr; gap: 0 28px; margin-bottom: 48px; }
+  .sn { font-family: var(--display); font-weight: 800; font-size: 96px; line-height: .85; letter-spacing: -4px; color: transparent; -webkit-text-stroke: 1.5px rgba(255,255,255,.28); }
+  .light .sn { -webkit-text-stroke-color: rgba(24,19,32,.25); }
+  .kick { font-size: 12.5px; letter-spacing: 2.4px; text-transform: uppercase; font-weight: 700; color: var(--pink); margin: 4px 0 10px; }
+  .light .kick { color: #c2357a; }
+  .sh h2 { font-family: var(--display); font-weight: 800; font-size: clamp(36px, 5vw, 62px); line-height: 1; letter-spacing: -2px; margin: 0 0 18px; }
+  .sh p { margin: 0; max-width: 720px; color: var(--muted); font-size: 17px; }
+  .light .sh p { color: var(--ink2); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .chip { font-size: 13px; font-weight: 600; padding: 6px 13px; border-radius: 99px; border: 1px solid var(--line); color: #d5cfe6; background: rgba(255,255,255,.03); }
+  .light .chip { border-color: var(--iline); color: var(--ink); background: #fff; }
+
+  .gh { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 64px 0 22px; padding-top: 22px; border-top: 1px solid var(--line); }
+  .gh:first-of-type { margin-top: 0; }
+  .light .gh { border-color: var(--iline); }
+  .gh h3 { font-family: var(--display); font-weight: 700; font-size: 28px; letter-spacing: -.6px; margin: 0; }
+  .gh span { color: var(--muted); font-size: 15px; max-width: 560px; }
+  .light .gh span { color: var(--ink2); }
+
+  /* video cards */
+  .vg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .vg.c6 { grid-template-columns: repeat(6, 1fr); gap: 16px; }
+  .vg.c3 { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .vg.c2 { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .vg.w2 { grid-template-columns: repeat(2, 1fr); }
+  .vc { display: block; width: 100%; padding: 0; border: 0; background: none; color: inherit; text-align: left; font: inherit; cursor: pointer; }
+  .vc .f { display: block; width: 100%; position: relative; aspect-ratio: 9/16; border-radius: 16px; overflow: hidden; background: var(--card2); isolation: isolate; box-shadow: 0 0 0 1px var(--line); transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s; }
+  .w2 .vc .f { aspect-ratio: 16/9; }
+  .vc .f img, .vc .f video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .vc .f:after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(0,0,0,.45)); pointer-events: none; }
+  .vc .pl { position: absolute; z-index: 2; left: 12px; bottom: 12px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,.92); display: grid; place-items: center; transition: transform .3s, background .3s; }
+  .vc .pl:after { content: ''; margin-left: 3px; border-left: 13px solid var(--ink); border-top: 8px solid transparent; border-bottom: 8px solid transparent; }
+  .vc .tg { position: absolute; z-index: 2; left: 10px; top: 10px; font-size: 10.5px; letter-spacing: .8px; text-transform: uppercase; font-weight: 800; padding: 4px 9px; border-radius: 99px; background: rgba(11,9,18,.72); backdrop-filter: blur(6px); color: #fff; }
+  .vc .tg.c { background: var(--grad); }
+  .vc:hover .f, .vc:focus-visible .f { transform: translateY(-6px); box-shadow: 0 0 0 2px var(--pink), 0 24px 50px -18px rgba(255,95,162,.55); }
+  .vc:hover .pl { transform: scale(1.1); background: #fff; }
+  .vc:focus-visible { outline: none; }
+  .vc .t { display: block; font-weight: 700; font-size: 15px; margin-top: 12px; line-height: 1.3; }
+  .vc .d { display: block; font-size: 13.5px; color: var(--muted); line-height: 1.45; margin-top: 3px; }
+  .light .vc .d { color: var(--ink2); }
+  .c6 .vc .t { font-size: 14px; }
+  .c6 .vc .d { font-size: 13px; }
+
+  /* images */
+  .ig { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .ig img { width: 100%; border-radius: 14px; cursor: zoom-in; transition: transform .3s, box-shadow .3s; box-shadow: 0 0 0 1px var(--line); }
+  .light .ig img { box-shadow: 0 0 0 1px var(--iline), 0 10px 30px -18px rgba(24,19,32,.35); }
+  .ig img:hover { transform: translateY(-4px) rotate(-.4deg); }
+  .ig.sq img { aspect-ratio: 1/1; object-fit: contain; background: #fff; }
+  .igcap { font-size: 14px; color: var(--muted); margin: 12px 0 0; }
+  .light .igcap { color: var(--ink2); }
+  .igcap b { color: inherit; font-weight: 700; }
+  .light .igcap b { color: var(--ink); }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 30px; }
+
+  /* case */
+  .case { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: center; padding: 40px; border-radius: 26px; background: #fff; box-shadow: 0 1px 0 var(--iline), 0 30px 60px -40px rgba(24,19,32,.4); margin-bottom: 28px; }
+  .case .brand { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .case h3 { font-family: var(--display); font-weight: 800; font-size: 38px; letter-spacing: -1.2px; margin: 0; line-height: 1; }
+  .case .where { font-size: 12px; font-weight: 800; letter-spacing: 1px; padding: 4px 10px; border-radius: 99px; background: var(--cream2); color: var(--ink2); }
+  .case .sub { color: var(--ink2); margin: 10px 0 18px; }
+  .case ul { margin: 0 0 24px; padding: 0; list-style: none; }
+  .case li { position: relative; padding-left: 22px; margin: 7px 0; font-size: 15.5px; }
+  .case li:before { content: ''; position: absolute; left: 0; top: 9px; width: 9px; height: 9px; border-radius: 3px; background: var(--grad); }
+  .kp { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .kp.k4 { grid-template-columns: repeat(4, 1fr); }
+  .kp div { padding: 16px 16px 14px; border-radius: 14px; background: var(--cream); }
+  .kp b { display: block; font-family: var(--display); font-weight: 800; font-size: 30px; letter-spacing: -1px; line-height: 1.05; background: linear-gradient(100deg, #7b45f0, #e2337f 70%, #e5871a); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .kp span { font-size: 13px; color: var(--ink2); line-height: 1.35; display: block; margin-top: 4px; }
+  .src { font-size: 12.5px; color: var(--ink2); margin-top: 14px; }
+  .more { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-weight: 700; text-decoration: none; color: #c2357a; }
+  .more:hover { text-decoration: underline; }
+  .case .vc .f { box-shadow: 0 0 0 1px var(--iline); }
+
+  /* cards */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 30px; }
+  .card { padding: 26px; border-radius: var(--r); background: var(--card); border: 1px solid var(--line); }
+  .light .card { background: #fff; border-color: var(--iline); }
+  .card .big { font-family: var(--display); font-weight: 800; font-size: 44px; letter-spacing: -1.5px; line-height: 1; margin-bottom: 12px; }
+  .card h4 { margin: 0 0 6px; font-size: 17px; }
+  .card p { margin: 0; color: var(--muted); font-size: 14.5px; }
+  .light .card p { color: var(--ink2); }
+
+  /* shots */
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .shots img { width: 100%; border-radius: 14px; cursor: zoom-in; box-shadow: 0 0 0 1px var(--line); transition: transform .3s; }
+  .shots img:hover { transform: translateY(-4px); }
+  .shots .cap { font-size: 14px; color: var(--muted); margin-top: 10px; }
+  .shots .cap b { color: var(--text); }
+
+  /* steps */
+  .flow { padding: 36px; border-radius: 26px; background: #fff; box-shadow: 0 1px 0 var(--iline), 0 30px 60px -40px rgba(24,19,32,.4); margin-bottom: 24px; }
+  section:not(.light) .flow { background: var(--card); box-shadow: none; border: 1px solid var(--line); }
+  .flow h3 { font-family: var(--display); font-weight: 800; font-size: 28px; letter-spacing: -.8px; margin: 0 0 6px; }
+  .flow > p { margin: 0 0 30px; color: var(--muted); }
+  .light .flow > p { color: var(--ink2); }
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; counter-reset: s; position: relative; }
+  .steps:before { content: ''; position: absolute; left: 22px; right: 22px; top: 21px; height: 2px; background: var(--grad); opacity: .5; }
+  .step { position: relative; counter-increment: s; }
+  .step:before { content: counter(s); display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--grad); color: #fff; font-family: var(--display); font-weight: 800; font-size: 18px; margin-bottom: 14px; box-shadow: 0 0 0 6px var(--bg2); }
+  .light .step:before { box-shadow: 0 0 0 6px #fff; }
+  section:not(.light) .step:before { box-shadow: 0 0 0 6px var(--card); }
+  .step .k { font-size: 11.5px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 800; color: var(--pink); }
+  .light .step .k { color: #c2357a; }
+  .step b { display: block; font-size: 16px; margin: 3px 0 4px; line-height: 1.3; }
+  .step span { font-size: 13.5px; color: var(--muted); line-height: 1.45; display: block; }
+  .light .step span { color: var(--ink2); }
+  .result { margin-top: 26px; padding: 16px 20px; border-radius: 14px; background: rgba(255,95,162,.08); border: 1px solid rgba(255,95,162,.25); font-size: 15px; }
+  .light .result { background: #fff3f8; }
+
+  /* contact */
+  .contact { position: relative; padding: 130px 0 50px; overflow: hidden; text-align: center; }
+  .contact:before { content: ''; position: absolute; left: 50%; top: -200px; width: 1100px; height: 700px; margin-left: -550px; background: radial-gradient(closest-side, rgba(155,107,255,.32), transparent 70%); pointer-events: none; }
+  .contact .wrap { position: relative; }
+  .contact h2 { font-family: var(--display); font-weight: 800; font-size: clamp(44px, 7.5vw, 104px); line-height: .95; letter-spacing: -3px; margin: 18px 0 22px; }
+  .contact p { color: var(--muted); max-width: 600px; margin: 0 auto 36px; font-size: 17px; }
+  .contact .btns { justify-content: center; }
+  .foot { margin-top: 100px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: #7d7593; font-size: 13px; text-align: left; }
+
+  /* dialogs */
+  dialog.mx { border: 0; padding: 0; background: transparent; max-width: 96vw; max-height: 96vh; overflow: visible; }
+  dialog.mx::backdrop { background: rgba(6,4,12,.9); backdrop-filter: blur(6px); }
+  dialog.mx video, dialog.mx img { max-width: 92vw; max-height: 88vh; border-radius: 16px; background: #000; }
+  dialog.mx .x { position: fixed; top: 16px; right: 18px; width: 46px; height: 46px; border-radius: 50%; border: 0; background: #fff; color: var(--ink); font-size: 22px; cursor: pointer; }
+  dialog.mx .cap { color: #fff; text-align: center; font-weight: 700; margin-top: 12px; font-size: 15px; }
+
+  /* reveal */
+  .js .rv { opacity: 0; transform: translateY(26px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+  .js .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .js .rv { opacity: 1; transform: none; transition: none; }
+    .track { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  @media (max-width: 1020px) {
+    .nav ul { display: none; }
+    .nav .cta { margin-left: auto; }
+    .hero .wrap { grid-template-columns: 1fr; }
+    .stack { height: 420px; max-width: 520px; width: 100%; margin: 10px auto 0; }
+    .stack video { width: 180px; }
+    .stack video:nth-child(2) { margin-left: -90px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .roles, .cards { grid-template-columns: 1fr; }
+    .vg.c6 { grid-template-columns: repeat(3, 1fr); }
+    .vg { grid-template-columns: repeat(3, 1fr); }
+    .case { grid-template-columns: 1fr; padding: 28px; }
+    .steps { grid-template-columns: 1fr; gap: 18px; }
+    .steps:before { left: 21px; right: auto; top: 22px; bottom: 22px; width: 2px; height: auto; background: linear-gradient(180deg, #9b6bff, #ff5fa2, #ffb547); }
+    .step { padding-left: 64px; min-height: 44px; }
+    .step:before { position: absolute; left: 0; top: 0; margin: 0; }
+    .shots { grid-template-columns: 1fr; }
+    .pair { grid-template-columns: 1fr; }
+    .sh { grid-template-columns: 1fr; }
+    .sn { font-size: 72px; margin-bottom: 12px; }
+  }
+  @media (max-width: 640px) {
+    .wrap { padding: 0 16px; }
+    .hero { padding: 116px 0 56px; }
+    .hero h1 { letter-spacing: -2px; }
+    .stack { height: 330px; }
+    .stack video { width: 138px; border-radius: 16px; }
+    .stack video:nth-child(2) { margin-left: -69px; }
+    .stack video:nth-child(1) { top: 50px; left: 10px; } .stack video:nth-child(3) { top: 60px; right: 10px; }
+    .tagfloat { font-size: 11px; padding: 6px 10px; }
+    .tagfloat.a { bottom: 8px; left: 0; }
+    .tagfloat.b { top: 0; }
+    .vg, .vg.c6, .vg.c3 { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .vg.w2 { grid-template-columns: 1fr; }
+    .ig { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .kp.k4 { grid-template-columns: repeat(2, 1fr); }
+    .case { padding: 22px 18px; border-radius: 20px; }
+    .case h3 { font-size: 30px; }
+    .flow { padding: 24px 18px; }
+    section.sec { padding-top: 80px; }
+    .stat { padding: 20px 16px; }
+    .gh h3 { font-size: 23px; }
+    .foot { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Muntaha<span>.</span></a>
+    <ul>
+      <li><a href="#ai-ads">AI Ads</a></li>
+      <li><a href="#story-reels">AI Video</a></li>
+      <li><a href="#agency">Agency</a></li>
+      <li><a href="#social">Social</a></li>
+      <li><a href="#ecommerce">E-commerce</a></li>
+      <li><a href="#influencers">Influencers</a></li>
+      <li><a href="#automation">Automation</a></li>
+    </ul>
+    <a class="cta" href="#contact">Hire me</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="pill"><i></i>Open to remote roles · Lahore, Pakistan</span>
+      <h1>Muntaha<br>Manzoor<span class="gt">.</span></h1>
+      <p class="lead">I'm an <b>AI ad creative</b>, <b>e-commerce manager</b> and <b>marketing manager</b> with 7+ years of experience. I make product video ads with generative AI, grow brands on social media without paid ads, and run online stores for US and international clients.</p>
+      <div class="btns">
+        <a class="btn g" href="#ai-ads">See my work ↓</a>
+        <a class="btn o" href="Muntaha-Manzoor-Portfolio.pdf" target="_blank" rel="noopener">Download PDF</a>
+      </div>
+    </div>
+    <div class="stack" aria-hidden="true">
+      <video autoplay muted loop playsinline preload="auto" poster="media/oh-ai-mask.jpg" src="media/oh-ai-mask.mp4"></video>
+      <video autoplay muted loop playsinline preload="auto" poster="media/tt-ai-confidence.jpg" src="media/tt-ai-confidence.mp4"></video>
+      <video autoplay muted loop playsinline preload="auto" poster="media/tt-ai-cardigan.jpg" src="media/tt-ai-cardigan.mp4"></video>
+      <span class="tagfloat a">AI video ads for <b>real brands</b></span>
+      <span class="tagfloat b"><b>$0</b> ad spend growth</span>
+    </div>
+  </div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Google Flow · Veo 3.1</span><span>Gemini · Nano Banana Pro</span><span>Higgsfield AI</span><span>Claude</span><span>Shopify</span><span>WooCommerce</span><span>Meta Business Suite</span><span>Buffer API</span><span>Google Apps Script</span><span>Printify</span><span>Canva</span><span>ffmpeg</span>
+    <span>Google Flow · Veo 3.1</span><span>Gemini · Nano Banana Pro</span><span>Higgsfield AI</span><span>Claude</span><span>Shopify</span><span>WooCommerce</span><span>Meta Business Suite</span><span>Buffer API</span><span>Google Apps Script</span><span>Printify</span><span>Canva</span><span>ffmpeg</span>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat rv"><b class="gt">7+ yrs</b><span>in marketing, e-commerce and client operations</span></div>
+    <div class="stat rv"><b class="gt">+277%</b><span>organic content views for ThreadTheorys in 90 days</span></div>
+    <div class="stat rv"><b class="gt">95%+</b><span>client satisfaction with US clients over 4+ years</span></div>
+    <div class="stat rv"><b class="gt">460+</b><span>post designs for apparel brands, plus 221 for one wellness brand</span></div>
+  </div>
+  <div class="roles">
+    <a class="role rv" href="#ai-ads"><div class="k">Role 01</div><h3>AI Ad Creative</h3><p>Product commercials, UGC-style ads, before/after ads and story reels, made with Veo 3.1, Gemini and Higgsfield.</p><span class="go gt">See AI work →</span></a>
+    <a class="role rv" href="#ecommerce"><div class="k">Role 02</div><h3>E-commerce Manager</h3><p>WooCommerce and Shopify setup, product listings, catalogues and dropshipping with CJ, AliExpress and Printify.</p><span class="go gt">See store work →</span></a>
+    <a class="role rv" href="#social"><div class="k">Role 03</div><h3>Marketing Manager</h3><p>Organic social growth, influencer outreach, and automated workflows for posting and cold email.</p><span class="go gt">See marketing work →</span></a>
+  </div>
+</div>
+
+<main>
+
+  <!-- 01 AI ADS -->
+  <section class="sec" id="ai-ads">
+    <div class="wrap">
+      <div class="sh rv">
+        <div class="sn">01</div>
+        <div>
+          <div class="kick">AI Ad Creative</div>
+          <h2>AI product video ads <em class="s gt">that stop the scroll</em></h2>
+          <p>I write the concept and hook, generate product stills and video clips, keep the product looking the same in every scene, then cut it all to music with on-screen text and an end card. Hover over any ad for a preview, or click it to watch with sound.</p>
+          <div class="chips"><span class="chip">Google Flow · Veo 3.1</span><span class="chip">Gemini · Nano Banana Pro</span><span class="chip">Higgsfield AI</span><span class="chip">Claude</span><span class="chip">ffmpeg editing</span></div>
+        </div>
+      </div>
+
+      <div class="gh rv"><h3>For real client brands</h3><span>AI-generated ads for Ohmistry (beauty-tech) and ThreadTheorys (apparel), ready for Reels and TikTok.</span></div>
+      <div class="vg rv">
+        <button class="vc" data-v="media/oh-ai-mask.mp4"><span class="f"><img src="media/oh-ai-mask.jpg" alt="" loading="lazy"><span class="tg c">Ohmistry</span><span class="pl"></span></span><span class="t">LED face &amp; neck mask bundle</span><span class="d">A glowing product reveal that ends on the full bundle.</span></button>
+        <button class="vc" data-v="media/oh-ai-molecule.mp4"><span class="f"><img src="media/oh-ai-molecule.jpg" alt="" loading="lazy"><span class="tg c">Ohmistry</span><span class="pl"></span></span><span class="t">Korean Glass Skin bundle</span><span class="d">Molecule visuals that lead to the product and a call to action.</span></button>
+        <button class="vc" data-v="media/tt-ai-shearling.mp4"><span class="f"><img src="media/tt-ai-shearling.jpg" alt="" loading="lazy"><span class="tg c">ThreadTheorys</span><span class="pl"></span></span><span class="t">Holiday party coat</span><span class="d">Close-ups of the fabric, then the full look.</span></button>
+        <button class="vc" data-v="media/tt-ai-cardigan.mp4"><span class="f"><img src="media/tt-ai-cardigan.jpg" alt="" loading="lazy"><span class="tg c">ThreadTheorys</span><span class="pl"></span></span><span class="t">Men's shawl cardigan</span><span class="d">One product in every colour on a Christmas set.</span></button>
+        <button class="vc" data-v="media/tt-ai-confidence.mp4"><span class="f"><img src="media/tt-ai-confidence.jpg" alt="" loading="lazy"><span class="tg c">ThreadTheorys</span><span class="pl"></span></span><span class="t">"Confidence this Christmas"</span><span class="d">A seasonal coat ad with a light-sweep effect.</span></button>
+        <button class="vc" data-v="media/tt-ai-ribbed.mp4"><span class="f"><img src="media/tt-ai-ribbed.jpg" alt="" loading="lazy"><span class="tg c">ThreadTheorys</span><span class="pl"></span></span><span class="t">Premium ribbed knit</span><span class="d">A menswear ad that ends on the brand card.</span></button>
+        <button class="vc" data-v="media/tt-ai-quilted.mp4"><span class="f"><img src="media/tt-ai-quilted.jpg" alt="" loading="lazy"><span class="tg c">ThreadTheorys</span><span class="pl"></span></span><span class="t">Quilted jacket</span><span class="d">Feature callouts placed on the product.</span></button>
+        <button class="vc" data-v="media/tt-ai-christmas.mp4"><span class="f"><img src="media/tt-ai-christmas.jpg" alt="" loading="lazy"><span class="tg c">ThreadTheorys</span><span class="pl"></span></span><span class="t">"Last week before Christmas"</span><span class="d">An urgency ad built around the delivery cut-off.</span></button>
+      </div>
+
+      <div class="gh rv"><h3>Concept commercials &amp; UGC ads</h3><span>Fictional brands I created as samples for my AI ad service.</span></div>
+      <div class="vg c6 rv">
+        <button class="vc" data-v="media/ai-dewva-hero.mp4"><span class="f"><img src="media/ai-dewva-hero.jpg" alt="" loading="lazy"><span class="tg">Concept</span><span class="pl"></span></span><span class="t">DEWVA serum commercial</span><span class="d">Four Veo clips cut on the beat.</span></button>
+        <button class="vc" data-v="media/ai-dewva-ugc.mp4"><span class="f"><img src="media/ai-dewva-ugc.jpg" alt="" loading="lazy"><span class="tg">Concept</span><span class="pl"></span></span><span class="t">DEWVA UGC-style ad</span><span class="d">AI presenter, hook and B-roll.</span></button>
+        <button class="vc" data-v="media/ai-velloa-hero.mp4"><span class="f"><img src="media/ai-velloa-hero.jpg" alt="" loading="lazy"><span class="tg">Concept</span><span class="pl"></span></span><span class="t">VELLOA hero ad</span><span class="d">City-scale reveal and animated CTA.</span></button>
+        <button class="vc" data-v="media/ai-velloa-ugc.mp4"><span class="f"><img src="media/ai-velloa-ugc.jpg" alt="" loading="lazy"><span class="tg">Concept</span><span class="pl"></span></span><span class="t">VELLOA review ad</span><span class="d">"Is it worth the hype?"</span></button>
+        <button class="vc" data-v="media/ai-oudara.mp4"><span class="f"><img src="media/ai-oudara.jpg" alt="" loading="lazy"><span class="tg">Concept</span><span class="pl"></span></span><span class="t">OUDARA perfume</span><span class="d">"Born from the desert"</span></button>
+        <button class="vc" data-v="media/ai-ruvea.mp4"><span class="f"><img src="media/ai-ruvea.jpg" alt="" loading="lazy"><span class="tg">Concept</span><span class="pl"></span></span><span class="t">RUVEA lipstick</span><span class="d">"Molten red"</span></button>
+      </div>
+
+      <div class="gh rv"><h3>Before → after product ads</h3><span>I turn one plain product photo into a styled 4:5 ad poster and a short 9:16 reveal reel.</span></div>
+      <div class="ig rv">
+        <img src="media/ba-voltra-poster.jpg" alt="VOLTRA smartwatch ad poster" loading="lazy">
+        <img src="media/ba-kova-poster.jpg" alt="KOVA cold coffee ad poster" loading="lazy">
+        <img src="media/ba-fizzora-poster.jpg" alt="FIZZORA sparkling drink ad poster" loading="lazy">
+        <img src="media/ba-auriq-poster.jpg" alt="AURIQ earbuds ad poster" loading="lazy">
+      </div>
+      <div class="vg rv" style="margin-top:22px">
+        <button class="vc" data-v="media/ba-fizzora.mp4"><span class="f"><img src="media/ba-fizzora.jpg" alt="" loading="lazy"><span class="tg">Reveal reel</span><span class="pl"></span></span><span class="t">FIZZORA: photo → ad</span></button>
+        <button class="vc" data-v="media/ba-voltra.mp4"><span class="f"><img src="media/ba-voltra.jpg" alt="" loading="lazy"><span class="tg">Reveal reel</span><span class="pl"></span></span><span class="t">VOLTRA: photo → ad</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 AI VIDEO -->
+  <section class="sec alt" id="story-reels">
+    <div class="wrap">
+      <div class="sh rv">
+        <div class="sn">02</div>
+        <div>
+          <div class="kick">AI storytelling</div>
+          <h2>Story reels &amp; <em class="s gt">faceless videos</em></h2>
+          <p>A series of short, funny reels for <b>Dadi's Lantern Books</b>, an Islamic children's book brand I run. A recurring cast of characters stays consistent across 19 episodes, and each reel teaches one everyday habit. I handle the script, scenes, voice, captions and edit.</p>
+          <div class="chips"><span class="chip">19 reels</span><span class="chip">Consistent character cast</span><span class="chip">Veo 3.1 + Gemini</span><span class="chip">Script, VO &amp; captions</span></div>
+        </div>
+      </div>
+      <div class="vg rv">
+        <button class="vc" data-v="media/dl-pizza.mp4"><span class="f"><img src="media/dl-pizza.jpg" alt="" loading="lazy"><span class="pl"></span></span><span class="t">Pizza Bismillah</span><span class="d">Saying Bismillah before eating.</span></button>
+        <button class="vc" data-v="media/dl-achoo.mp4"><span class="f"><img src="media/dl-achoo.jpg" alt="" loading="lazy"><span class="pl"></span></span><span class="t">Achoo Alhamdulillah</span><span class="d">Good manners after a sneeze.</span></button>
+        <button class="vc" data-v="media/dl-smile.mp4"><span class="f"><img src="media/dl-smile.jpg" alt="" loading="lazy"><span class="pl"></span></span><span class="t">The Smile Superpower</span><span class="d">A smile counts as charity.</span></button>
+        <button class="vc" data-v="media/dl-glasses.mp4"><span class="f"><img src="media/dl-glasses.jpg" alt="" loading="lazy"><span class="pl"></span></span><span class="t">Dadi's Missing Glasses</span><span class="d">Helping grandparents.</span></button>
+      </div>
+
+      <div class="gh rv"><h3>Faceless YouTube videos for a client</h3><span>Long-form videos with nobody on camera: AI illustrations that follow the script, plus voiceover, subtitles and slow camera moves. 60-second previews of 2–3 minute videos.</span></div>
+      <div class="vg w2 rv">
+        <button class="vc" data-v="media/yt-faceless-1.mp4"><span class="f"><img src="media/yt-faceless-1.jpg" alt="" loading="lazy"><span class="tg c">Client work</span><span class="pl"></span></span><span class="t">Faceless video · Script 2</span><span class="d">A story-led video with a dreamy illustrated look.</span></button>
+        <button class="vc" data-v="media/yt-faceless-2.mp4"><span class="f"><img src="media/yt-faceless-2.jpg" alt="" loading="lazy"><span class="tg c">Client work</span><span class="pl"></span></span><span class="t">Faceless video · Script 3</span><span class="d">A hook-first video about social proof and "success stories".</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 AGENCY -->
+  <section class="sec" id="agency">
+    <div class="wrap">
+      <div class="sh rv">
+        <div class="sn">03</div>
+        <div>
+          <div class="kick">Agency content</div>
+          <h2>Reels &amp; web video <em class="s gt">for a digital agency</em></h2>
+          <p>I made these reels for <b>RetroDigitalHub</b> to show small businesses what better branding and a website could do for them, and a scroll-animated hero video for a client's homepage. The store names in the reels are examples.</p>
+          <div class="chips"><span class="chip">Reel scripting</span><span class="chip">English voiceover</span><span class="chip">Website hero video</span></div>
+        </div>
+      </div>
+      <div class="vg rv">
+        <button class="vc" data-v="media/rdh-makeover-01.mp4"><span class="f"><img src="media/rdh-makeover-01.jpg" alt="" loading="lazy"><span class="tg">Series</span><span class="pl"></span></span><span class="t">Store Makeover · EP 01</span><span class="d">How a clothing store's Instagram could look.</span></button>
+        <button class="vc" data-v="media/rdh-makeover-03.mp4"><span class="f"><img src="media/rdh-makeover-03.jpg" alt="" loading="lazy"><span class="tg">Series</span><span class="pl"></span></span><span class="t">Store Makeover · EP 03</span><span class="d">A home bakery, with a new script for its niche.</span></button>
+        <button class="vc" data-v="media/rdh-mockup-01.mp4"><span class="f"><img src="media/rdh-mockup-01.jpg" alt="" loading="lazy"><span class="tg">Series</span><span class="pl"></span></span><span class="t">Website Mockup · EP 01</span><span class="d">"4.9 stars, zero website": a salon concept.</span></button>
+        <button class="vc" data-v="media/web-sehat.mp4"><span class="f"><img src="media/web-sehat.jpg" alt="" loading="lazy"><span class="tg c">Client site</span><span class="pl"></span></span><span class="t">Sehat Care Hub hero video</span><span class="d">A "field to kitchen" homepage story built from Veo clips.</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 SOCIAL -->
+  <section class="sec light" id="social">
+    <div class="wrap">
+      <div class="sh rv">
+        <div class="sn">04</div>
+        <div>
+          <div class="kick">Marketing Manager</div>
+          <h2>Social media <em class="s">for e-commerce brands</em></h2>
+          <p>I create posts and reels that explain products, plan seasonal campaigns and grow pages organically. Every result below came with $0 ad spend.</p>
+          <div class="chips"><span class="chip">Instagram · Facebook · TikTok · Pinterest · LinkedIn</span><span class="chip">Product reels</span><span class="chip">US holiday campaigns</span></div>
+        </div>
+      </div>
+
+      <div class="case rv">
+        <div>
+          <div class="brand"><h3>Ohmistry</h3><span class="where">US</span></div>
+          <p class="sub">Beauty-tech and light-therapy e-commerce brand</p>
+          <ul>
+            <li>Posts that explain the benefits of LED masks, hair-growth devices and serums</li>
+            <li>A short demo reel for every hero product</li>
+            <li>Bundle promotions and US holiday offers, such as a Halloween campaign</li>
+          </ul>
+          <div class="kp">
+            <div><b>+2,178%</b><span>content views (3,052)</span></div>
+            <div><b>95.5%</b><span>of views from non-followers</span></div>
+            <div><b>55.8%</b><span>of all views came from reels</span></div>
+            <div><b>$0</b><span>ad spend, 100% organic</span></div>
+          </div>
+          <div class="src">Source: Facebook Professional Dashboard, Jul 16 – Oct 13, compared with the previous 90 days.</div>
+        </div>
+        <div class="vg c3">
+          <button class="vc" data-v="media/oh-led-mask.mp4"><span class="f"><img src="media/oh-led-mask.jpg" alt="" loading="lazy"><span class="pl"></span></span></button>
+          <button class="vc" data-v="media/oh-neck.mp4"><span class="f"><img src="media/oh-neck.jpg" alt="" loading="lazy"><span class="pl"></span></span></button>
+          <button class="vc" data-v="media/oh-cryo.mp4"><span class="f"><img src="media/oh-cryo.jpg" alt="" loading="lazy"><span class="pl"></span></span></button>
+        </div>
+      </div>
+
+      <div class="case rv">
+        <div>
+          <div class="brand"><h3>ThreadTheorys</h3><span class="where">US</span></div>
+          <p class="sub">Luxury lifestyle and apparel brand for yachting, golf and polo communities</p>
+          <ul>
+            <li>Collection-launch, offer and product-showcase reels</li>
+            <li>Content plans tailored to TikTok, Meta and Pinterest</li>
+            <li>Event and seasonal posts for its niche audience</li>
+          </ul>
+          <div class="kp">
+            <div><b>16.0K</b><span>content views (+276.9%)</span></div>
+            <div><b>8,926</b><span>unique viewers (+422.9%)</span></div>
+            <div><b>202</b><span>content interactions (+140.5%)</span></div>
+            <div><b>$0</b><span>ad spend, 100% organic</span></div>
+          </div>
+          <div class="src">Source: Meta Business Suite Insights, Jul 7 – Oct 4.</div>
+        </div>
+        <div class="vg c3">
+          <button class="vc" data-v="media/tt-launch.mp4"><span class="f"><img src="media/tt-launch.jpg" alt="" loading="lazy"><span class="pl"></span></span></button>
+          <button class="vc" data-v="media/tt-cardigan.mp4"><span class="f"><img src="media/tt-cardigan.jpg" alt="" loading="lazy"><span class="pl"></span></span></button>
+          <button class="vc" data-v="media/tt-overalls.mp4"><span class="f"><img src="media/tt-overalls.jpg" alt="" loading="lazy"><span class="pl"></span></span></button>
+        </div>
+      </div>
+
+      <div class="case rv">
+        <div>
+          <div class="brand"><h3>Spanish wellness brand</h3><span class="where">ESPAÑOL</span></div>
+          <p class="sub">Wellness centre and diet-plan app for a Spanish-speaking audience</p>
+          <ul>
+            <li>Monthly batches of educational carousels, product reels and app-launch reels</li>
+            <li>Spanish voiceovers, captions and on-screen text</li>
+            <li>Client transformation posts for the diet programme</li>
+          </ul>
+          <div class="kp k4">
+            <div><b>98</b><span>posts &amp; carousels</span></div>
+            <div><b>75</b><span>reels</span></div>
+            <div><b>48</b><span>voiceovers</span></div>
+            <div><b>6+ mo</b><span>monthly batches</span></div>
+          </div>
+          <a class="more" href="https://canva.link/sg7laft882utwtg" target="_blank" rel="noopener">View more samples on Canva →</a>
+        </div>
+        <div class="vg c2">
+          <button class="vc" data-v="media/sp-app.mp4"><span class="f"><img src="media/sp-app.jpg" alt="" loading="lazy"><span class="tg">App launch</span><span class="pl"></span></span></button>
+          <button class="vc" data-v="media/sp-dragon.mp4"><span class="f"><img src="media/sp-dragon.jpg" alt="" loading="lazy"><span class="tg">Product reel</span><span class="pl"></span></span></button>
+        </div>
+      </div>
+      <div class="ig sq rv">
+        <img src="media/sp-foods-1.jpg" alt="Spanish carousel: foods for memory and focus" loading="lazy">
+        <img src="media/sp-foods-3.jpg" alt="Spanish carousel: foods for eye health" loading="lazy">
+        <img src="media/sp-foods-5.jpg" alt="Spanish carousel: foods for healthy skin" loading="lazy">
+        <img src="media/sp-diet-1.jpg" alt="Diet programme client transformation post" loading="lazy">
+      </div>
+      <p class="igcap">From the "Foods and their effects" carousel, plus a client transformation post for the diet programme.</p>
+
+      <div class="gh rv"><h3>Post designs for apparel brands</h3><span>Each print-on-demand brand gets its own template, so the feed stays consistent across hundreds of designs.</span></div>
+      <div class="ig rv">
+        <img src="media/mx-wild.jpg" alt="Maxotees.pk post: Wild Thing tee" loading="lazy">
+        <img src="media/mx-stop.jpg" alt="Maxotees.pk post: Stop Doubting Yourself tee" loading="lazy">
+        <img src="media/mx-noexc.jpg" alt="Maxotees.pk post: No Excuses tee" loading="lazy">
+        <img src="media/mx-hustler.jpg" alt="Maxotees.pk post: Hustler tee" loading="lazy">
+      </div>
+      <p class="igcap"><b>Maxotees.pk</b> (Pakistan): 168 posts using lifestyle model shots in a bold black-and-white template.</p>
+      <div class="ig rv" style="margin-top:22px">
+        <img src="media/vv-happy.jpg" alt="Vivilen post: Simple Happy Face t-shirt" loading="lazy">
+        <img src="media/vv-brave.jpg" alt="Vivilen post: Be Brave floral t-shirt" loading="lazy">
+        <img src="media/vv-panda.jpg" alt="Vivilen post: I Love Resting panda t-shirt" loading="lazy">
+        <img src="media/vv-volley.jpg" alt="Vivilen post: Volleyball on Fire t-shirt" loading="lazy">
+      </div>
+      <p class="igcap"><b>Vivilen</b>: 290+ product posts and feed-grid layouts in a soft neutral template.</p>
+
+      <div class="cards">
+        <div class="card rv"><div class="big gt">460+</div><h4>Apparel post designs</h4><p>Product posts for Maxotees.pk and Vivilen, each in the brand's own template.</p></div>
+        <div class="card rv"><div class="big gt">5</div><h4>Apparel &amp; print-on-demand brands</h4><p>Weekly social content, t-shirt designs and product visuals for brands in the US and Pakistan.</p></div>
+        <div class="card rv"><div class="big gt">1+ yr</div><h4>B2B aviation-parts client</h4><p>Weekly product and catalogue visuals, plus logo work.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 ECOMMERCE -->
+  <section class="sec" id="ecommerce">
+    <div class="wrap">
+      <div class="sh rv">
+        <div class="sn">05</div>
+        <div>
+          <div class="kick">E-commerce Manager</div>
+          <h2>Stores built <em class="s gt">to convert</em></h2>
+          <p>I set up and run WooCommerce and Shopify stores, covering store structure, navigation, product variations, listings that sell, catalogue sync and dropshipping. Click a case study to read it in full.</p>
+          <div class="chips"><span class="chip">WooCommerce</span><span class="chip">Shopify</span><span class="chip">CJ Dropshipping · AliExpress · AliDropship</span><span class="chip">Printify</span><span class="chip">cPanel</span></div>
+        </div>
+      </div>
+      <div class="shots rv">
+        <div><img src="media/cs-store-tt.jpg" alt="ThreadTheorys store case study" loading="lazy"><div class="cap"><b>ThreadTheorys:</b> store architecture, filters, variations and Printify sync</div></div>
+        <div><img src="media/cs-store-oh.jpg" alt="Ohmistry store case study" loading="lazy"><div class="cap"><b>Ohmistry:</b> bundle structure, product education and conversion paths</div></div>
+        <div><img src="media/cs-listing-tt.jpg" alt="ThreadTheorys product listing case study" loading="lazy"><div class="cap"><b>Product listings:</b> titles, descriptions and photos, before and after</div></div>
+      </div>
+      <div class="cards">
+        <div class="card rv"><div class="big gt">1,300+</div><h4>Product mockup files</h4><p>For print-on-demand stores, including AI-assisted t-shirt designs (Midjourney).</p></div>
+        <div class="card rv"><div class="big gt">3,000+</div><h4>Online stores audited</h4><p>Catalogue, SEO and email-setup checks, run with my own audit scripts to find real problems for client pitches.</p></div>
+        <div class="card rv"><div class="big gt">US · UK · PK</div><h4>Markets</h4><p>Black Friday, Christmas and White Friday prep, with copy localised for each market.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 INFLUENCERS -->
+  <section class="sec light" id="influencers">
+    <div class="wrap">
+      <div class="sh rv">
+        <div class="sn">06</div>
+        <div>
+          <div class="kick">Partnerships</div>
+          <h2>Influencer &amp; <em class="s">creator outreach</em></h2>
+          <p>I find creators who fit the brand, write personal outreach and keep campaigns organised from the first DM to the follow-up.</p>
+          <div class="chips"><span class="chip">Rewardful</span><span class="chip">Collaborator</span><span class="chip">Instagram DMs</span><span class="chip">Affiliate offers</span></div>
+        </div>
+      </div>
+      <div class="cards" style="margin-top:0">
+        <div class="card rv"><div class="big gt">UGC</div><h4>Influencer campaigns (SCG)</h4><p>At a US-based firm I coordinate influencer and UGC activity through Rewardful and Collaborator, keeping tasks, creators and communication organised.</p></div>
+        <div class="card rv"><div class="big gt">5 packs</div><h4>Review-partner programme</h4><p>For Dadi's Lantern Books I built a creator lead sheet with a fit reason and personal hook for each account, plus five DM packs for different audiences.</p></div>
+        <div class="card rv"><div class="big gt">70+</div><h4>Personal gift cards</h4><p>One designed card per creator, plus an affiliate offer with a gift code and 30% commission, so partners have a reason to post.</p></div>
+      </div>
+      <div class="flow rv" style="margin-top:24px">
+        <h3>How a creator campaign runs</h3>
+        <p>The same steps work for a book, a skincare launch or a fashion drop.</p>
+        <div class="steps">
+          <div class="step"><div class="k">Find</div><b>Creator research</b><span>Niche, audience, country and recent posts</span></div>
+          <div class="step"><div class="k">Qualify</div><b>Fit + hook</b><span>Why this creator, plus one personal detail</span></div>
+          <div class="step"><div class="k">Reach out</div><b>Personal DM</b><span>Gift card, free product or affiliate code</span></div>
+          <div class="step"><div class="k">Follow up</div><b>Tracker</b><span>Status, follow-up date and content received</span></div>
+          <div class="step"><div class="k">Reuse</div><b>UGC library</b><span>The best creator content becomes ads</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 AUTOMATION -->
+  <section class="sec" id="automation">
+    <div class="wrap">
+      <div class="sh rv">
+        <div class="sn">07</div>
+        <div>
+          <div class="kick">Systems</div>
+          <h2>Marketing <em class="s gt">on autopilot</em></h2>
+          <p>I build workflows that run in the background, so posting and outreach keep going while I focus on strategy and clients. I build them with Claude, connecting Google Sheets, Apps Script and scheduling APIs.</p>
+          <div class="chips"><span class="chip">Claude</span><span class="chip">Google Apps Script</span><span class="chip">Google Sheets</span><span class="chip">Buffer API</span><span class="chip">Metricool</span><span class="chip">GitHub</span></div>
+        </div>
+      </div>
+      <div class="flow rv">
+        <h3>Social media autopilot</h3>
+        <p>One content sheet drives Instagram and LinkedIn. New posts reach the scheduler on their own, and their statuses update themselves.</p>
+        <div class="steps">
+          <div class="step"><div class="k">Plan</div><b>Content sheet</b><span>Date, time, image, caption, hashtags and AI label</span></div>
+          <div class="step"><div class="k">Host</div><b>Image library</b><span>Designs published to a GitHub asset repo</span></div>
+          <div class="step"><div class="k">Every 3 h</div><b>Apps Script autopilot</b><span>Picks rows marked "To schedule" when a slot is free</span></div>
+          <div class="step"><div class="k">Publish</div><b>Buffer API</b><span>Same post to Instagram and LinkedIn, each with its own caption</span></div>
+          <div class="step"><div class="k">Track</div><b>Status + log</b><span>Scheduled and posted statuses sync back, and errors are logged</span></div>
+        </div>
+        <div class="result"><b>Result:</b> 2+ months of feed posts and stories queued ahead, with every Instagram post mirrored to LinkedIn automatically.</div>
+      </div>
+      <div class="flow rv">
+        <h3>Cold email outreach system</h3>
+        <p>Lead research, store audits and personalised emails, sent by a script on a safe schedule, with follow-ups.</p>
+        <div class="steps">
+          <div class="step"><div class="k">Find</div><b>Lead discovery</b><span>Gift guides, local news and store directories</span></div>
+          <div class="step"><div class="k">Audit</div><b>Store check scripts</b><span>Empty pages, weak listings, missing SPF/DMARC</span></div>
+          <div class="step"><div class="k">Verify</div><b>Same-day re-check</b><span>Only real, visible problems are used</span></div>
+          <div class="step"><div class="k">Send</div><b>Apps Script sender</b><span>Daily caps, sent during each country's business hours</span></div>
+          <div class="step"><div class="k">Follow up</div><b>Day 7 + day 14</b><span>Replies alert me, and the inbox shows only replies</span></div>
+        </div>
+        <div class="result"><b>Result:</b> 3,000+ stores audited, with every email personalised using problems verified that day.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <span class="pill"><i></i>Available now</span>
+    <h2>Let's make your<br>brand <em class="s gt">sell more.</em></h2>
+    <p>I'm open to roles as an AI Ad Creative, E-commerce Manager or Marketing Manager, remote or in Lahore.</p>
+    <div class="btns">
+      <a class="btn g" href="mailto:muntahaahsan336@gmail.com">muntahaahsan336@gmail.com</a>
+      <a class="btn o" href="https://www.linkedin.com/in/muntaha-manzoor-7b6604220/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn o" href="Muntaha-Manzoor-Portfolio.pdf" target="_blank" rel="noopener">PDF portfolio</a>
+    </div>
+    <div class="foot"><span>© 2026 Muntaha Manzoor · Lahore, Pakistan</span><span>Concept ads use fictional brand names. Results are shown with the platform and date range they came from.</span></div>
+  </div>
+</footer>
+
+<dialog class="mx" id="vm"><button class="x" aria-label="Close">×</button><video controls playsinline></video></dialog>
+<dialog class="mx" id="im"><button class="x" aria-label="Close">×</button><img alt=""></dialog>
+
+<script>
+(function () {
+  // nav background + active link
+  var nav = document.getElementById('nav');
+  function onScroll() { nav.classList.toggle('solid', window.scrollY > 30); }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+  var links = {}; document.querySelectorAll('.nav ul a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+  if ('IntersectionObserver' in window) {
+    var so = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting && links[e.target.id]) { Object.values(links).forEach(function (a) { a.classList.remove('on'); }); links[e.target.id].classList.add('on'); } });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('section.sec').forEach(function (s) { so.observe(s); });
+    // reveal
+    var ro = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('.rv').forEach(function (el) { ro.observe(el); });
+  } else { document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); }); }
+
+  // video modal
+  var vm = document.getElementById('vm'), vv = vm.querySelector('video');
+  function closeV() { vv.pause(); vv.removeAttribute('src'); vv.load(); if (vm.open) vm.close(); }
+  vm.querySelector('.x').onclick = closeV;
+  vm.addEventListener('click', function (e) { if (e.target === vm) closeV(); });
+  vm.addEventListener('cancel', function () { vv.pause(); });
+  vm.addEventListener('close', function () { vv.pause(); });
+  var hoverOK = window.matchMedia('(hover: hover) and (pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('.vc').forEach(function (b) {
+    var src = b.getAttribute('data-v'), f = b.querySelector('.f'), pv = null;
+    b.addEventListener('click', function () {
+      if (pv) { pv.remove(); pv = null; }
+      vv.src = src; vv.poster = b.querySelector('img').src;
+      vm.showModal(); vv.play().catch(function () {});
+    });
+    if (hoverOK) {
+      b.addEventListener('mouseenter', function () {
+        pv = document.createElement('video'); pv.muted = true; pv.loop = true; pv.playsInline = true; pv.src = src;
+        f.insertBefore(pv, f.querySelector('.tg') || f.querySelector('.pl')); pv.play().catch(function () {});
+      });
+      b.addEventListener('mouseleave', function () { if (pv) { pv.pause(); pv.remove(); pv = null; } });
+    }
+  });
+
+  // image lightbox
+  var im = document.getElementById('im');
+  im.querySelector('.x').onclick = function () { im.close(); };
+  im.addEventListener('click', function (e) { if (e.target === im) im.close(); });
+  document.querySelectorAll('.ig img, .shots img').forEach(function (img) {
+    img.addEventListener('click', function () { im.querySelector('img').src = img.src; im.querySelector('img').alt = img.alt; im.showModal(); });
+  });
+
+  // pause hero loops when off screen (saves battery)
+  var hv = document.querySelectorAll('.stack video');
+  if ('IntersectionObserver' in window && hv.length) {
+    new IntersectionObserver(function (es) { es.forEach(function (e) { hv.forEach(function (v) { e.isIntersecting ? v.play().catch(function(){}) : v.pause(); }); }); }).observe(document.querySelector('.stack'));
+  }
+})();
+</script>
+</body>
+</html>
