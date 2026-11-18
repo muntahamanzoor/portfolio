@@ -78,7 +78,11 @@
   .rot { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.5vw, 30px); letter-spacing: -.6px; margin: -8px 0 16px; color: #e9e4f5; }
   .rw { display: inline-block; transition: opacity .35s, transform .35s; }
   .rw.out { opacity: 0; transform: translateY(12px); }
-  .clients { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .clients { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .cl.feat { grid-column: span 2; background: var(--ink); border-color: var(--ink); color: #fff; }
+  .cl.feat b { font-size: 28px; background: linear-gradient(100deg, #b48cff, #ff7ab6 60%, #ffc06b); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .cl.feat span { color: #b9b2cc; }
+  .cl.feat i { background: rgba(255,255,255,.1); color: #fff; }
   .cl { position: relative; padding: 22px 20px 18px; border-radius: 16px; background: #fff; border: 1px solid var(--iline); min-height: 128px; display: flex; flex-direction: column; justify-content: flex-end; transition: transform .25s, box-shadow .25s, border-color .25s; }
   .cl:hover { transform: translateY(-4px); border-color: transparent; box-shadow: 0 0 0 2px #e2337f, 0 18px 40px -22px rgba(226,51,127,.55); }
   .cl i + b { margin-top: 12px; }
@@ -748,6 +752,7 @@
 
       <div class="gh rv" style="margin-top:70px"><h3>Brands &amp; clients I've created for</h3><span>From US e-commerce brands to Pakistani real estate and POD stores.</span></div>
       <div class="clients rv">
+        <div class="cl feat"><i>2019 – 2026 · 7 yrs</i><b>Digiware Solutions</b><span>Digital services company · I managed US client accounts, projects and marketing</span></div>
         <div class="cl"><i>US</i><b>Ohmistry</b><span>Beauty-tech e-commerce</span></div>
         <div class="cl"><i>US</i><b>ThreadTheorys</b><span>Luxury apparel</span></div>
         <div class="cl"><i>US</i><b>SCG</b><span>US-based firm</span></div>
