@@ -78,12 +78,13 @@
   .rot { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.5vw, 30px); letter-spacing: -.6px; margin: -8px 0 16px; color: #e9e4f5; }
   .rw { display: inline-block; transition: opacity .35s, transform .35s; }
   .rw.out { opacity: 0; transform: translateY(12px); }
-  .brandsband { background: var(--bg2); border-block: 1px solid var(--line); padding: 22px 0 20px; overflow: hidden; }
-  .brandsband .lbl { text-align: center; font-size: 12px; letter-spacing: 2.4px; text-transform: uppercase; font-weight: 700; color: #7d7593; margin-bottom: 14px; }
-  .brandsband .track span { font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: -.6px; color: #6f6888; transition: color .3s; }
-  .brandsband .track span:hover { color: var(--text); }
-  .brandsband .track { animation-duration: 45s; }
-  .brandsband:hover .track { animation-play-state: paused; }
+  .clients { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .cl { position: relative; padding: 22px 20px 18px; border-radius: 16px; background: #fff; border: 1px solid var(--iline); min-height: 128px; display: flex; flex-direction: column; justify-content: flex-end; transition: transform .25s, box-shadow .25s, border-color .25s; }
+  .cl:hover { transform: translateY(-4px); border-color: transparent; box-shadow: 0 0 0 2px #e2337f, 0 18px 40px -22px rgba(226,51,127,.55); }
+  .cl i + b { margin-top: 12px; }
+  .cl b { font-family: var(--display); font-weight: 800; font-size: 21px; letter-spacing: -.5px; line-height: 1.1; }
+  .cl span { font-size: 13.5px; color: var(--ink2); margin-top: 4px; }
+  .cl i { align-self: flex-end; margin: -6px -6px auto 0; padding-bottom: 0; font-style: normal; font-size: 10.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; padding: 3px 8px; border-radius: 99px; background: var(--cream2); color: var(--ink2); }
   .spot { position: relative; overflow: hidden; }
   .spot:after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(255,95,162,.16), transparent 45%); opacity: 0; transition: opacity .3s; }
   .light .spot:after { background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(155,107,255,.12), transparent 45%); }
@@ -276,6 +277,7 @@
 
   @media (max-width: 1020px) {
     .xp { grid-template-columns: 1fr; }
+    .clients { grid-template-columns: repeat(3, 1fr); }
     .nav ul { display: none; }
     .nav .cta { margin-left: auto; }
     .hero .wrap { grid-template-columns: 1fr; }
@@ -300,7 +302,9 @@
     .jobs { padding: 24px 16px 4px; border-radius: 20px; }
     .job { padding-left: 24px; }
     .job h3 { font-size: 21px; }
-    .brandsband .track span { font-size: 21px; }
+    .clients { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .cl { min-height: 112px; padding: 18px 14px 14px; }
+    .cl b { font-size: 18px; }
     .totop { right: 14px; bottom: 14px; width: 44px; height: 44px; }
     .wrap { padding: 0 16px; }
     .hero { padding: 116px 0 56px; }
@@ -369,11 +373,10 @@
   </div>
 </header>
 
-<div class="brandsband">
-  <div class="lbl">Brands &amp; clients I've created for</div>
+<div class="marquee" aria-hidden="true">
   <div class="track">
-    <span>Ohmistry</span><span>ThreadTheorys</span><span>Land Master</span><span>Maxotees.pk</span><span>Vivilen</span><span>RetroDigitalHub</span><span>Sehat Care Hub</span><span>Dadi's Lantern Books</span><span>SCG</span>
-    <span aria-hidden="true">Ohmistry</span><span aria-hidden="true">ThreadTheorys</span><span aria-hidden="true">Land Master</span><span aria-hidden="true">Maxotees.pk</span><span aria-hidden="true">Vivilen</span><span aria-hidden="true">RetroDigitalHub</span><span aria-hidden="true">Sehat Care Hub</span><span aria-hidden="true">Dadi's Lantern Books</span><span aria-hidden="true">SCG</span>
+    <span>Google Flow · Veo 3.1</span><span>Gemini · Nano Banana Pro</span><span>Higgsfield AI</span><span>Claude</span><span>Shopify</span><span>WooCommerce</span><span>Meta Business Suite</span><span>Buffer API</span><span>Google Apps Script</span><span>Printify</span><span>Canva</span><span>ffmpeg</span>
+    <span>Google Flow · Veo 3.1</span><span>Gemini · Nano Banana Pro</span><span>Higgsfield AI</span><span>Claude</span><span>Shopify</span><span>WooCommerce</span><span>Meta Business Suite</span><span>Buffer API</span><span>Google Apps Script</span><span>Printify</span><span>Canva</span><span>ffmpeg</span>
   </div>
 </div>
 
@@ -741,6 +744,20 @@
           <div class="card rv"><small>Certification · 2026</small><b>Meta Ads: Pixel, Catalog Sales &amp; Facebook Shop</b><span>Udemy</span></div>
           <div class="card rv"><small>Languages</small><b>English · Urdu</b><span>Professional · Native</span></div>
         </div>
+      </div>
+
+      <div class="gh rv" style="margin-top:70px"><h3>Brands &amp; clients I've created for</h3><span>From US e-commerce brands to Pakistani real estate and POD stores.</span></div>
+      <div class="clients rv">
+        <div class="cl"><i>US</i><b>Ohmistry</b><span>Beauty-tech e-commerce</span></div>
+        <div class="cl"><i>US</i><b>ThreadTheorys</b><span>Luxury apparel</span></div>
+        <div class="cl"><i>US</i><b>SCG</b><span>US-based firm</span></div>
+        <div class="cl"><i>Español</i><b>Spanish wellness brand</b><span>Wellness centre &amp; diet app</span></div>
+        <div class="cl"><i>PK</i><b>Land Master</b><span>Real estate</span></div>
+        <div class="cl"><i>PK</i><b>Maxotees.pk</b><span>POD t-shirts</span></div>
+        <div class="cl"><i>POD</i><b>Vivilen</b><span>POD t-shirts</span></div>
+        <div class="cl"><i>Agency</i><b>RetroDigitalHub</b><span>Digital agency</span></div>
+        <div class="cl"><i>Web</i><b>Sehat Care Hub</b><span>Jaggery brand website</span></div>
+        <div class="cl"><i>Own brand</i><b>Dadi's Lantern Books</b><span>Children's book brand</span></div>
       </div>
     </div>
   </section>
