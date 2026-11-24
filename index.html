@@ -83,6 +83,18 @@
   .rot { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.5vw, 30px); letter-spacing: -.6px; margin: -8px 0 16px; color: #e9e4f5; }
   .rw { display: inline-block; transition: opacity .35s, transform .35s; }
   .rw.out { opacity: 0; transform: translateY(12px); }
+  .cgroups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+  .cg { border-radius: 20px; background: #fff; border: 1px solid var(--iline); overflow: hidden; box-shadow: 0 30px 60px -45px rgba(24,19,32,.4); }
+  .cgh { padding: 22px 22px 18px; background: var(--ink); color: #fff; }
+  .cgh i { display: inline-block; font-style: normal; font-size: 10.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; padding: 3px 9px; border-radius: 99px; background: rgba(255,255,255,.1); }
+  .cgh b { display: block; margin-top: 12px; font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: -.6px; line-height: 1.1; background: linear-gradient(100deg, #b48cff, #ff7ab6 60%, #ffc06b); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .cgh span { display: block; color: #b9b2cc; font-size: 13.5px; margin-top: 4px; }
+  .cg ul { list-style: none; margin: 0; padding: 6px 22px 10px; }
+  .cg li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--iline); }
+  .cg li:last-child { border-bottom: 0; }
+  .cg li b { font-family: var(--display); font-weight: 800; font-size: 17px; letter-spacing: -.3px; line-height: 1.2; }
+  .cg li span { font-size: 12.5px; color: var(--ink2); text-align: right; }
+  @media (max-width: 1000px) { .cgroups { grid-template-columns: 1fr; } }
   .clients { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
   .cl.feat { grid-column: span 2; background: var(--ink); border-color: var(--ink); color: #fff; }
   .cl.feat b { font-size: 28px; background: linear-gradient(100deg, #b48cff, #ff7ab6 60%, #ffc06b); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -116,7 +128,8 @@
   .edu .card small { display: block; font-size: 12px; font-weight: 800; letter-spacing: 1.4px; text-transform: uppercase; color: #c2357a; margin-bottom: 6px; }
   .edu .card b { display: block; font-size: 16.5px; line-height: 1.35; }
   .edu .card span { display: block; color: var(--ink2); font-size: 14px; margin-top: 2px; }
-  .edu .crs { list-style: none; margin: 12px 0 10px; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .edu .card b.b2 { margin-top: 12px; }
+  .edu .crs { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
   .edu .crs li { font-size: 13px; font-weight: 600; padding: 5px 11px; border-radius: 99px; background: var(--cream); border: 1px solid var(--iline); }
   .tagfloat { position: absolute; z-index: 4; font-size: 12.5px; font-weight: 700; padding: 8px 13px; border-radius: 99px; background: rgba(24,20,36,.9); border: 1px solid var(--line); backdrop-filter: blur(6px); white-space: nowrap; }
   .tagfloat.a { left: 10px; bottom: 40px; } .tagfloat.b { right: 0; top: 30px; }
@@ -230,7 +243,8 @@
   .quote blockquote { margin: 0; font-family: var(--serif); font-size: 29px; line-height: 1.32; color: var(--text); max-width: 1000px; }
   .quote blockquote b { font-weight: 400; font-style: italic; color: #ff8fc0; }
   .quote figcaption { display: flex; align-items: center; gap: 14px; margin-top: 26px; flex-wrap: wrap; }
-  .quote .ql { flex: 0 0 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--grad); color: #0b0912; font-weight: 800; font-size: 12.5px; letter-spacing: .5px; }
+  .quote .ql { flex: 0 0 52px; height: 52px; }
+  .quote .ql img { width: 100%; height: 100%; object-fit: contain; display: block; }
   .quote .qw b { display: block; font-size: 15.5px; }
   .quote .qw small { color: var(--muted); font-size: 13px; }
   .quote figcaption a { margin-left: auto; color: #ff8fc0; font-weight: 700; text-decoration: none; font-size: 14.5px; }
@@ -252,7 +266,8 @@
   .logos figcaption span { display: block; font-weight: 400; font-size: 12.5px; color: var(--muted); }
   .revs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   .rev { padding: 26px 26px 22px; border-radius: 20px; background: var(--card); box-shadow: 0 0 0 1px var(--line); display: flex; flex-direction: column; }
-  .rev .st { color: var(--amber); letter-spacing: 3px; font-size: 15px; }
+  .rev .st { display: flex; justify-content: space-between; align-items: center; color: var(--amber); letter-spacing: 3px; font-size: 15px; }
+  .rev .st em { font-style: normal; letter-spacing: .8px; font-size: 11px; font-weight: 800; text-transform: uppercase; color: #1dbf73; padding: 3px 9px; border-radius: 99px; background: rgba(29,191,115,.12); }
   .rev p { flex: 1; margin: 12px 0 18px; font-size: 15px; line-height: 1.6; color: var(--text); }
   .rev .who { font-size: 12.5px; color: var(--muted); }
   .rev .who b { display: block; color: var(--text); font-size: 14px; margin-bottom: 2px; }
@@ -443,15 +458,21 @@
     <a class="role rv" href="#ecommerce"><div class="k">Role 02</div><h3>E-commerce Manager</h3><p>WooCommerce and Shopify setup, product listings, catalogues and dropshipping with CJ, AliExpress and Printify.</p><span class="go gt">See store work →</span></a>
     <a class="role rv" href="#social"><div class="k">Role 03</div><h3>Marketing Manager</h3><p>Organic social growth, influencer outreach, and automated workflows for posting and cold email.</p><span class="go gt">See marketing work →</span></a>
   </div>
-  <figure class="quote rv" id="recommendation">
+  <div class="gh rv" id="reviews" style="margin-top:70px"><h3>What clients say</h3><span>Simple Consultant Group (US), the firm I work with as Marketing Manager: a LinkedIn recommendation and three 5-star Fiverr reviews.</span></div>
+  <figure class="quote rv" id="recommendation" style="margin-top:0">
     <div class="qm gt" aria-hidden="true">&ldquo;</div>
     <blockquote>Muntaha has been an <b>exceptional Marketing Manager</b> at Simple Consultant Group. She expertly handles our US branding, web projects, and content strategies, while bringing strong analytical depth through her work on Credit Market Analysis and investor summaries. Highly organized and driven, she is a massive asset to our team. I strongly recommend Muntaha for any leadership role in marketing and e-commerce.</blockquote>
     <figcaption>
-      <span class="ql" aria-hidden="true">SCG</span>
+      <span class="ql"><img src="media/logo-scg.png" alt="Simple Consultant Group logo"></span>
       <span class="qw"><b>Simple Consultant Group LLC</b><small>US-based firm · LinkedIn recommendation · Oct 2026</small></span>
       <a href="https://www.linkedin.com/in/muntaha-manzoor/details/recommendations/" target="_blank" rel="noopener">See it on LinkedIn →</a>
     </figcaption>
   </figure>
+  <div class="revs rv" style="margin-top:18px">
+    <div class="rev"><div class="st"><span aria-label="5 stars">★★★★★</span><em>Fiverr</em></div><p>&ldquo;Great work—highly recommend this designer for anyone seeking a polished and timeless logo! Currently, and will continue to work with her on current and future projects!!&rdquo;</p><div class="who"><b>Kimberly, HR department</b>Simple Consultant Group · US · Khalil Packard logo</div></div>
+    <div class="rev"><div class="st"><span aria-label="5 stars">★★★★★</span><em>Fiverr</em></div><p>&ldquo;I highly appreciate the designer's professionalism, responsiveness, and ability to bring our vision to life. This logo is a true reflection of her talent and dedication. Highly recommended for anyone seeking a sophisticated, high-quality logo design!&rdquo;</p><div class="who"><b>Kimberly, HR department</b>Simple Consultant Group · US · SCG logo</div></div>
+    <div class="rev"><div class="st"><span aria-label="5 stars">★★★★★</span><em>Fiverr</em></div><p>&ldquo;I am absolutely amazed with the Whitfield Estates logo designed for our real estate business. The designer's exceptional skills are evident in every detail text to design. From the initial concept drafts to the final refinements, the designer was highly responsive and collaborative…&rdquo;</p><div class="who"><b>simpleconsults</b>Simple Consultant Group · US · Whitfield Estates logo</div></div>
+  </div>
 </div>
 
 <main>
@@ -729,12 +750,7 @@
         <figure><div class="lt cream"><img src="media/logo-trinket.png" alt="Trinket R Us logo" loading="lazy"></div><figcaption>Trinket R Us<span>Retail</span></figcaption></figure>
       </div>
 
-      <div class="gh rv" style="margin-top:56px"><h3>★ 5.0 on Fiverr</h3><span>Reviews for logo orders from Simple Consultant Group (US), the firm I now work with as Marketing Manager.</span></div>
-      <div class="revs rv">
-        <div class="rev"><div class="st" aria-label="5 stars">★★★★★</div><p>&ldquo;Great work—highly recommend this designer for anyone seeking a polished and timeless logo! Currently, and will continue to work with her on current and future projects!!&rdquo;</p><div class="who"><b>Kimberly, HR department</b>Simple Consultant Group · US · Khalil Packard logo</div></div>
-        <div class="rev"><div class="st" aria-label="5 stars">★★★★★</div><p>&ldquo;I highly appreciate the designer's professionalism, responsiveness, and ability to bring our vision to life. This logo is a true reflection of her talent and dedication. Highly recommended for anyone seeking a sophisticated, high-quality logo design!&rdquo;</p><div class="who"><b>Kimberly, HR department</b>Simple Consultant Group · US · SCG logo</div></div>
-        <div class="rev"><div class="st" aria-label="5 stars">★★★★★</div><p>&ldquo;I am absolutely amazed with the Whitfield Estates logo designed for our real estate business. The designer's exceptional skills are evident in every detail text to design. From the initial concept drafts to the final refinements, the designer was highly responsive and collaborative…&rdquo;</p><div class="who"><b>simpleconsults</b>Simple Consultant Group · US · Whitfield Estates logo</div></div>
-      </div>
+      <a class="more" href="#reviews" style="margin-top:26px">★ 5.0 on Fiverr: read the client reviews ↑</a>
     </div>
   </section>
 
@@ -854,26 +870,41 @@
         <div class="edu">
           <div class="card rv"><small>Education</small><b>Postgraduate Degree, Marketing Management</b><span>Virtual University of Pakistan · in progress</span></div>
           <div class="card rv"><small>Education</small><b>BS Economics</b><span>International Islamic University Islamabad</span></div>
-          <div class="card rv"><small>Certification · 2026</small><b>Google Ads Search Certification</b><span>Google Skillshop</span></div>
-          <div class="card rv"><small>Certification · 2026</small><b>Meta Ads: Pixel, Catalog Sales &amp; Facebook Shop</b><span>Udemy</span></div>
-          <div class="card rv"><small>Diploma &amp; courses</small><b>Professional Diploma in Social Media Marketing &amp; Management</b><ul class="crs"><li>Digital Marketing</li><li>E-commerce Management</li><li>Graphic Design</li><li>Video Editing, Animation &amp; Vlogging</li><li>Virtual Assistant</li></ul><span>Short courses: Virtual University of Pakistan</span></div>
+          <div class="card rv"><small>Certifications · 2026</small><b>Google Ads Search Certification</b><span>Google Skillshop</span><b class="b2">Meta Ads: Pixel, Catalog Sales &amp; Facebook Shop</b><span>Udemy</span></div>
+          <div class="card rv"><small>Courses</small><b>Short courses</b><span>Virtual University of Pakistan</span><ul class="crs"><li>Digital Marketing</li><li>E-commerce Management</li><li>Graphic Design</li><li>Video Editing, Animation &amp; Vlogging</li><li>Virtual Assistant</li></ul></div>
           <div class="card rv"><small>Languages</small><b>English · Urdu</b><span>Professional · Native</span></div>
         </div>
       </div>
 
-      <div class="gh rv" style="margin-top:70px"><h3>Brands &amp; clients I've created for</h3><span>From US e-commerce brands to Pakistani real estate and POD stores.</span></div>
-      <div class="clients rv">
-        <div class="cl feat"><i>2021 – 2026 · 5 yrs</i><b>Digiware Solutions</b><span>Digital services company · I managed US client accounts, projects and marketing</span></div>
-        <div class="cl"><i>US</i><b>Ohmistry</b><span>Beauty-tech e-commerce</span></div>
-        <div class="cl"><i>US</i><b>ThreadTheorys</b><span>Luxury apparel</span></div>
-        <div class="cl"><i>US</i><b>SCG</b><span>US-based firm</span></div>
-        <div class="cl"><i>Español</i><b>Spanish wellness brand</b><span>Wellness centre &amp; diet app</span></div>
-        <div class="cl"><i>PK</i><b>Land Master</b><span>Real estate</span></div>
-        <div class="cl"><i>PK</i><b>Maxotees.pk</b><span>POD t-shirts</span></div>
-        <div class="cl"><i>POD</i><b>Vivilen</b><span>POD t-shirts</span></div>
-        <div class="cl"><i>Agency</i><b>RetroDigitalHub</b><span>Digital agency</span></div>
-        <div class="cl"><i>Web</i><b>Sehat Care Hub</b><span>Jaggery brand website</span></div>
-        <div class="cl"><i>Own brand</i><b>Dadi's Lantern Books</b><span>Children's book brand</span></div>
+      <div class="gh rv" style="margin-top:70px"><h3>Brands &amp; clients I've created for</h3><span>Grouped by where the work happened: at SCG, at Digiware Solutions, or as freelance work and my own brand.</span></div>
+      <div class="cgroups rv">
+        <div class="cg">
+          <div class="cgh"><i>Jun 2025 – now · US</i><b>SCG</b><span>Marketing Manager · Simple Consultant Group</span></div>
+          <ul>
+            <li><b>Ohmistry</b><span>Beauty-tech e-commerce · US</span></li>
+            <li><b>ThreadTheorys</b><span>Luxury apparel · US</span></li>
+            <li><b>SCG's own brand</b><span>Logo, US branding &amp; CMA reports</span></li>
+          </ul>
+        </div>
+        <div class="cg">
+          <div class="cgh"><i>2021 – May 2026 · 5 yrs</i><b>Digiware Solutions</b><span>Marketing Specialist · client accounts &amp; projects</span></div>
+          <ul>
+            <li><b>Land Master</b><span>Real estate · PK</span></li>
+            <li><b>Maxotees.pk</b><span>POD t-shirts · PK</span></li>
+            <li><b>Vivilen</b><span>POD t-shirts</span></li>
+            <li><b>Aviation-parts client</b><span>B2B catalogue visuals</span></li>
+          </ul>
+        </div>
+        <div class="cg">
+          <div class="cgh"><i>Independent</i><b>Freelance &amp; own brand</b><span>Direct clients and my own projects</span></div>
+          <ul>
+            <li><b>Spanish wellness brand</b><span>Wellness centre &amp; diet app</span></li>
+            <li><b>Faceless YouTube client</b><span>Long-form AI video</span></li>
+            <li><b>RetroDigitalHub</b><span>Digital agency · PK</span></li>
+            <li><b>Sehat Care Hub</b><span>Jaggery brand website</span></li>
+            <li><b>Dadi's Lantern Books</b><span>Own children's book brand</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -925,6 +956,7 @@
 
   // spotlight on cards
   document.querySelectorAll('.role, .stat, .card, .flow, .case, .jobs').forEach(function (el) {
+    if (el.closest('.edu')) return;
     el.classList.add('spot');
     el.addEventListener('pointermove', function (e) { var r = el.getBoundingClientRect(); el.style.setProperty('--mx', (e.clientX - r.left) + 'px'); el.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
   });
