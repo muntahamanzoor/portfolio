@@ -239,6 +239,23 @@
     .quote blockquote { font-size: 21px; }
     .quote figcaption a { margin-left: 0; flex-basis: 100%; }
   }
+  .logos { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+  .logos figure { margin: 0; }
+  .logos .lt { position: relative; aspect-ratio: 1/1; border-radius: 18px; background: #fff; overflow: hidden; box-shadow: 0 0 0 1px var(--line); transition: transform .3s; }
+  .logos .lt.blk { background: #000; }
+  .logos .lt.cream { background: #fbf4ea; }
+  .logos .lt:hover { transform: translateY(-4px); }
+  .logos img { position: absolute; inset: 12%; width: 76%; height: 76%; object-fit: contain; cursor: zoom-in; }
+  .logos figcaption { margin-top: 10px; font-size: 14px; font-weight: 700; line-height: 1.3; }
+  .logos figcaption span { display: block; font-weight: 400; font-size: 12.5px; color: var(--muted); }
+  .revs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .rev { padding: 26px 26px 22px; border-radius: 20px; background: var(--card); box-shadow: 0 0 0 1px var(--line); display: flex; flex-direction: column; }
+  .rev .st { color: var(--amber); letter-spacing: 3px; font-size: 15px; }
+  .rev p { flex: 1; margin: 12px 0 18px; font-size: 15px; line-height: 1.6; color: var(--text); }
+  .rev .who { font-size: 12.5px; color: var(--muted); }
+  .rev .who b { display: block; color: var(--text); font-size: 14px; margin-bottom: 2px; }
+  @media (max-width: 1100px) { .logos { grid-template-columns: repeat(4, 1fr); } .revs { grid-template-columns: 1fr; } }
+  @media (max-width: 720px) { .logos { grid-template-columns: repeat(3, 1fr); gap: 12px; } .logos .lt { border-radius: 14px; } .logos figcaption { font-size: 12.5px; } .logos figcaption span { font-size: 11.5px; } }
   .case.dk { background: var(--card); box-shadow: 0 0 0 1px var(--line), 0 30px 60px -40px rgba(0,0,0,.6); }
   .case.dk .sub { color: var(--muted); }
   .case.dk .kp div { background: var(--card2); }
@@ -373,6 +390,7 @@
       <li><a href="#story-reels">AI Video</a></li>
       <li><a href="#agency">Agency</a></li>
       <li><a href="#social">Social</a></li>
+      <li><a href="#logos">Logos</a></li>
       <li><a href="#ecommerce">E-commerce</a></li>
       <li><a href="#influencers">Influencers</a></li>
       <li><a href="#automation">Automation</a></li>
@@ -682,11 +700,47 @@
     </div>
   </section>
 
-  <!-- 05 ECOMMERCE -->
-  <section class="sec" id="ecommerce">
+  <!-- 05 LOGOS -->
+  <section class="sec alt" id="logos">
     <div class="wrap">
       <div class="sh rv">
         <div class="sn">05</div>
+        <div>
+          <div class="kick">Brand identity</div>
+          <h2>Logos <em class="s gt">for real businesses</em></h2>
+          <p>I design each logo in Canva around the client's name, industry and colours, then use AI tools to add depth and polish. Clients get a clean flat version and an enhanced version for their website, signage and social media.</p>
+          <div class="chips"><span class="chip">Canva</span><span class="chip">AI enhancement</span><span class="chip">Transparent PNG</span><span class="chip">Flat vector SVG</span><span class="chip">★ 5.0 on Fiverr</span></div>
+        </div>
+      </div>
+      <div class="logos rv">
+        <figure><div class="lt"><img src="media/logo-ohmistry.png" alt="Ohmistry logo" loading="lazy"></div><figcaption>Ohmistry<span>Beauty &amp; wellness</span></figcaption></figure>
+        <figure><div class="lt blk"><img src="media/logo-tt.png" alt="ThreadTheorys logo" loading="lazy"></div><figcaption>ThreadTheorys<span>Fashion</span></figcaption></figure>
+        <figure><div class="lt"><img src="media/logo-whitfield.png" alt="Whitfield Estates logo" loading="lazy"></div><figcaption>Whitfield Estates<span>Real estate</span></figcaption></figure>
+        <figure><div class="lt"><img src="media/logo-khalil.png" alt="Khalil Packard, Inc logo" loading="lazy"></div><figcaption>Khalil Packard, Inc<span>Healthcare</span></figcaption></figure>
+        <figure><div class="lt"><img src="media/logo-halas.png" alt="Halas CG Construction logo" loading="lazy"></div><figcaption>Halas CG<span>Construction</span></figcaption></figure>
+        <figure><div class="lt"><img src="media/logo-scg.png" alt="Simple Consultant Group logo" loading="lazy"></div><figcaption>SCG<span>Consulting</span></figcaption></figure>
+        <figure><div class="lt"><img src="media/logo-hines.png" alt="Hines Aqua Fresh logo" loading="lazy"></div><figcaption>Hines Aqua Fresh<span>Seafood</span></figcaption></figure>
+        <figure><div class="lt"><img src="media/logo-inverness.png" alt="Inverness Natural Lagoon logo" loading="lazy"></div><figcaption>Inverness Natural Lagoon<span>Real estate</span></figcaption></figure>
+        <figure><div class="lt"><img src="media/logo-phl.png" alt="PHL Asset Holdings logo" loading="lazy"></div><figcaption>PHL Asset Holdings<span>Property investment</span></figcaption></figure>
+        <figure><div class="lt"><img src="media/logo-pmsg.png" alt="Proud PMSG logo" loading="lazy"></div><figcaption>Proud PMSG<span>Property management</span></figcaption></figure>
+        <figure><div class="lt"><img src="media/logo-sgpm.png" alt="Proud SGPM logo" loading="lazy"></div><figcaption>Proud SGPM<span>Property management</span></figcaption></figure>
+        <figure><div class="lt cream"><img src="media/logo-trinket.png" alt="Trinket R Us logo" loading="lazy"></div><figcaption>Trinket R Us<span>Retail</span></figcaption></figure>
+      </div>
+
+      <div class="gh rv" style="margin-top:56px"><h3>★ 5.0 on Fiverr</h3><span>Reviews for logo orders from Simple Consultant Group (US), the firm I now work with as Marketing Manager.</span></div>
+      <div class="revs rv">
+        <div class="rev"><div class="st" aria-label="5 stars">★★★★★</div><p>&ldquo;Great work—highly recommend this designer for anyone seeking a polished and timeless logo! Currently, and will continue to work with her on current and future projects!!&rdquo;</p><div class="who"><b>Kimberly, HR department</b>Simple Consultant Group · US · Khalil Packard logo</div></div>
+        <div class="rev"><div class="st" aria-label="5 stars">★★★★★</div><p>&ldquo;I highly appreciate the designer's professionalism, responsiveness, and ability to bring our vision to life. This logo is a true reflection of her talent and dedication. Highly recommended for anyone seeking a sophisticated, high-quality logo design!&rdquo;</p><div class="who"><b>Kimberly, HR department</b>Simple Consultant Group · US · SCG logo</div></div>
+        <div class="rev"><div class="st" aria-label="5 stars">★★★★★</div><p>&ldquo;I am absolutely amazed with the Whitfield Estates logo designed for our real estate business. The designer's exceptional skills are evident in every detail text to design. From the initial concept drafts to the final refinements, the designer was highly responsive and collaborative…&rdquo;</p><div class="who"><b>simpleconsults</b>Simple Consultant Group · US · Whitfield Estates logo</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 ECOMMERCE -->
+  <section class="sec" id="ecommerce">
+    <div class="wrap">
+      <div class="sh rv">
+        <div class="sn">06</div>
         <div>
           <div class="kick">E-commerce Manager</div>
           <h2>Stores built <em class="s gt">to convert</em></h2>
@@ -711,7 +765,7 @@
   <section class="sec light" id="influencers">
     <div class="wrap">
       <div class="sh rv">
-        <div class="sn">06</div>
+        <div class="sn">07</div>
         <div>
           <div class="kick">Partnerships</div>
           <h2>Influencer &amp; <em class="s">creator outreach</em></h2>
@@ -742,7 +796,7 @@
   <section class="sec" id="automation">
     <div class="wrap">
       <div class="sh rv">
-        <div class="sn">07</div>
+        <div class="sn">08</div>
         <div>
           <div class="kick">Systems</div>
           <h2>Marketing <em class="s gt">on autopilot</em></h2>
@@ -781,7 +835,7 @@
   <section class="sec light" id="experience">
     <div class="wrap">
       <div class="sh rv">
-        <div class="sn">08</div>
+        <div class="sn">09</div>
         <div>
           <div class="kick">Career</div>
           <h2>Experience <em class="s">&amp; education</em></h2>
@@ -917,7 +971,7 @@
   var im = document.getElementById('im');
   im.querySelector('.x').onclick = function () { im.close(); };
   im.addEventListener('click', function (e) { if (e.target === im) im.close(); });
-  document.querySelectorAll('.ig img, .shots img').forEach(function (img) {
+  document.querySelectorAll('.ig img, .shots img, .logos img').forEach(function (img) {
     img.addEventListener('click', function () { im.querySelector('img').src = img.src; im.querySelector('img').alt = img.alt; im.showModal(); });
   });
 
