@@ -222,6 +222,23 @@
   .more { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; font-weight: 700; text-decoration: none; color: #c2357a; }
   .more:hover { text-decoration: underline; }
   .case .vc .f { box-shadow: 0 0 0 1px var(--iline); }
+  .quote { position: relative; margin: 28px 0 0; padding: 40px 48px 36px; border-radius: 26px; background: var(--card); box-shadow: 0 0 0 1px var(--line); overflow: hidden; }
+  .quote:before { content: ''; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--grad); }
+  .quote .qm { font-family: var(--serif); font-size: 90px; line-height: 1; height: 44px; display: block; width: max-content; }
+  .quote blockquote { margin: 0; font-family: var(--serif); font-size: 29px; line-height: 1.32; color: var(--text); max-width: 1000px; }
+  .quote blockquote b { font-weight: 400; font-style: italic; color: #ff8fc0; }
+  .quote figcaption { display: flex; align-items: center; gap: 14px; margin-top: 26px; flex-wrap: wrap; }
+  .quote .ql { flex: 0 0 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--grad); color: #0b0912; font-weight: 800; font-size: 12.5px; letter-spacing: .5px; }
+  .quote .qw b { display: block; font-size: 15.5px; }
+  .quote .qw small { color: var(--muted); font-size: 13px; }
+  .quote figcaption a { margin-left: auto; color: #ff8fc0; font-weight: 700; text-decoration: none; font-size: 14.5px; }
+  .quote figcaption a:hover { text-decoration: underline; }
+  @media (max-width: 720px) {
+    .quote { padding: 28px 20px 24px 24px; border-radius: 20px; }
+    .quote .qm { font-size: 70px; height: 34px; }
+    .quote blockquote { font-size: 21px; }
+    .quote figcaption a { margin-left: 0; flex-basis: 100%; }
+  }
   .case.dk { background: var(--card); box-shadow: 0 0 0 1px var(--line), 0 30px 60px -40px rgba(0,0,0,.6); }
   .case.dk .sub { color: var(--muted); }
   .case.dk .kp div { background: var(--card2); }
@@ -406,6 +423,15 @@
     <a class="role rv" href="#ecommerce"><div class="k">Role 02</div><h3>E-commerce Manager</h3><p>WooCommerce and Shopify setup, product listings, catalogues and dropshipping with CJ, AliExpress and Printify.</p><span class="go gt">See store work →</span></a>
     <a class="role rv" href="#social"><div class="k">Role 03</div><h3>Marketing Manager</h3><p>Organic social growth, influencer outreach, and automated workflows for posting and cold email.</p><span class="go gt">See marketing work →</span></a>
   </div>
+  <figure class="quote rv" id="recommendation">
+    <div class="qm gt" aria-hidden="true">&ldquo;</div>
+    <blockquote>Muntaha has been an <b>exceptional Marketing Manager</b> at Simple Consultant Group. She expertly handles our US branding, web projects, and content strategies, while bringing strong analytical depth through her work on Credit Market Analysis and investor summaries. Highly organized and driven, she is a massive asset to our team. I strongly recommend Muntaha for any leadership role in marketing and e-commerce.</blockquote>
+    <figcaption>
+      <span class="ql" aria-hidden="true">SCG</span>
+      <span class="qw"><b>Simple Consultant Group LLC</b><small>US-based firm · LinkedIn recommendation · Oct 2026</small></span>
+      <a href="https://www.linkedin.com/in/muntaha-manzoor/details/recommendations/" target="_blank" rel="noopener">See it on LinkedIn →</a>
+    </figcaption>
+  </figure>
 </div>
 
 <main>
