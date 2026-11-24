@@ -83,19 +83,10 @@
   .rot { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 2.5vw, 30px); letter-spacing: -.6px; margin: -8px 0 16px; color: #e9e4f5; }
   .rw { display: inline-block; transition: opacity .35s, transform .35s; }
   .rw.out { opacity: 0; transform: translateY(12px); }
-  .cgroups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
-  .cg { border-radius: 20px; background: #fff; border: 1px solid var(--iline); overflow: hidden; box-shadow: 0 30px 60px -45px rgba(24,19,32,.4); }
-  .cgh { padding: 22px 22px 18px; background: var(--ink); color: #fff; }
-  .cgh i { display: inline-block; font-style: normal; font-size: 10.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; padding: 3px 9px; border-radius: 99px; background: rgba(255,255,255,.1); }
-  .cgh b { display: block; margin-top: 12px; font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: -.6px; line-height: 1.1; background: linear-gradient(100deg, #b48cff, #ff7ab6 60%, #ffc06b); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .cgh span { display: block; color: #b9b2cc; font-size: 13.5px; margin-top: 4px; }
-  .cg ul { list-style: none; margin: 0; padding: 6px 22px 10px; }
-  .cg li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 13px 0; border-bottom: 1px solid var(--iline); }
-  .cg li:last-child { border-bottom: 0; }
-  .cg li b { font-family: var(--display); font-weight: 800; font-size: 17px; letter-spacing: -.3px; line-height: 1.2; }
-  .cg li span { font-size: 12.5px; color: var(--ink2); text-align: right; }
-  @media (max-width: 1000px) { .cgroups { grid-template-columns: 1fr; } }
   .clients { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .cl i.t-scg { background: #efe6ff; color: #6b3fd6; }
+  .cl i.t-dw { background: #ffe3ef; color: #c2357a; }
+  .cl i.t-fl { background: #fff0d9; color: #a8650f; }
   .cl.feat { grid-column: span 2; background: var(--ink); border-color: var(--ink); color: #fff; }
   .cl.feat b { font-size: 28px; background: linear-gradient(100deg, #b48cff, #ff7ab6 60%, #ffc06b); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .cl.feat span { color: #b9b2cc; }
@@ -876,35 +867,20 @@
         </div>
       </div>
 
-      <div class="gh rv" style="margin-top:70px"><h3>Brands &amp; clients I've created for</h3><span>Grouped by where the work happened: at SCG, at Digiware Solutions, or as freelance work and my own brand.</span></div>
-      <div class="cgroups rv">
-        <div class="cg">
-          <div class="cgh"><i>Jun 2025 – now · US</i><b>SCG</b><span>Marketing Manager · Simple Consultant Group</span></div>
-          <ul>
-            <li><b>Ohmistry</b><span>Beauty-tech e-commerce · US</span></li>
-            <li><b>ThreadTheorys</b><span>Luxury apparel · US</span></li>
-            <li><b>SCG's own brand</b><span>Logo, US branding &amp; CMA reports</span></li>
-          </ul>
-        </div>
-        <div class="cg">
-          <div class="cgh"><i>2021 – May 2026 · 5 yrs</i><b>Digiware Solutions</b><span>Marketing Specialist · client accounts &amp; projects</span></div>
-          <ul>
-            <li><b>Land Master</b><span>Real estate · PK</span></li>
-            <li><b>Maxotees.pk</b><span>POD t-shirts · PK</span></li>
-            <li><b>Vivilen</b><span>POD t-shirts</span></li>
-            <li><b>Aviation-parts client</b><span>B2B catalogue visuals</span></li>
-          </ul>
-        </div>
-        <div class="cg">
-          <div class="cgh"><i>Independent</i><b>Freelance &amp; own brand</b><span>Direct clients and my own projects</span></div>
-          <ul>
-            <li><b>Spanish wellness brand</b><span>Wellness centre &amp; diet app</span></li>
-            <li><b>Faceless YouTube client</b><span>Long-form AI video</span></li>
-            <li><b>RetroDigitalHub</b><span>Digital agency · PK</span></li>
-            <li><b>Sehat Care Hub</b><span>Jaggery brand website</span></li>
-            <li><b>Dadi's Lantern Books</b><span>Own children's book brand</span></li>
-          </ul>
-        </div>
+      <div class="gh rv" style="margin-top:70px"><h3>Brands &amp; clients I've created for</h3><span>The tag on each card shows where I did the work: at SCG, at Digiware Solutions, or as freelance work.</span></div>
+      <div class="clients rv">
+        <div class="cl"><i class="t-scg">SCG</i><b>Ohmistry</b><span>Beauty-tech e-commerce · US</span></div>
+        <div class="cl"><i class="t-scg">SCG</i><b>ThreadTheorys</b><span>Luxury apparel · US</span></div>
+        <div class="cl"><i class="t-scg">SCG</i><b>SCG</b><span>Own logo, US branding &amp; CMA reports</span></div>
+        <div class="cl"><i class="t-dw">Digiware</i><b>Land Master</b><span>Real estate · PK</span></div>
+        <div class="cl"><i class="t-dw">Digiware</i><b>Maxotees.pk</b><span>POD t-shirts · PK</span></div>
+        <div class="cl"><i class="t-dw">Digiware</i><b>Vivilen</b><span>POD t-shirts</span></div>
+        <div class="cl"><i class="t-dw">Digiware</i><b>Aviation-parts client</b><span>B2B catalogue visuals</span></div>
+        <div class="cl"><i class="t-fl">Freelance</i><b>Spanish wellness brand</b><span>Wellness centre &amp; diet app</span></div>
+        <div class="cl"><i class="t-fl">Freelance</i><b>Faceless YouTube client</b><span>Long-form AI video</span></div>
+        <div class="cl"><i class="t-fl">Freelance</i><b>RetroDigitalHub</b><span>Digital agency · PK</span></div>
+        <div class="cl"><i class="t-fl">Freelance</i><b>Sehat Care Hub</b><span>Jaggery brand website</span></div>
+        <div class="cl"><i class="t-fl">Own brand</i><b>Dadi's Lantern Books</b><span>Children's book brand</span></div>
       </div>
     </div>
   </section>
